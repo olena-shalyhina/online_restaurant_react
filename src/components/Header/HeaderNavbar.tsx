@@ -1,14 +1,17 @@
 import { FC } from 'react';
+import { useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import './Header.module.scss';
 
 export const HeaderNavbar: FC = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <Navbar
       expand="md"
@@ -27,11 +30,11 @@ export const HeaderNavbar: FC = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-md-0 fs-4"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
+            style={{ maxHeight: '200px' }}
           >
-            <Nav.Link href="#action1">HOME</Nav.Link>
-            <NavDropdown title="MENU" id="navbarScrollingDropdown">
+            <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/menu">MENU</Nav.Link>
+            {/* <NavDropdown title="MENU" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3" className="text-danger">
                 Meat dishes
               </NavDropdown.Item>
@@ -42,7 +45,7 @@ export const HeaderNavbar: FC = () => {
               <NavDropdown.Item href="#action5" className="text-danger">
                 Sushi and rolls
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
             <Nav.Link href="#">CONTACTS</Nav.Link>
           </Nav>
           <Form className="d-flex">
