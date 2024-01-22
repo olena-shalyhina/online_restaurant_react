@@ -1,14 +1,15 @@
 import { FC } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import '../../styles/mainPage.scss';
 
 export const MenuSlider: FC = () => {
   return (
-    <div className="menu-container row mb-5">
-      <Carousel className="bg-dark text-center w-75 m-auto">
+    <div className="menu-container row ">
+      <Carousel className=" text-center w-75 m-auto">
         <Carousel.Item interval={5000}>
           <img
             src="..//..//src/assets/1630224720_1.jpg"
-            className="d-block w-75 m-auto py-5 bg-dark"
+            className="d-block w-75 m-auto py-5"
             alt="Meat dishes"
           />
           <Carousel.Caption>
@@ -18,7 +19,7 @@ export const MenuSlider: FC = () => {
         <Carousel.Item interval={2500}>
           <img
             src="..//..//src/assets/1630219545_12.jpg"
-            className="d-block w-75 m-auto py-5 bg-dark"
+            className="d-block w-75 m-auto py-5"
             alt="Fish dishes"
           />
           <Carousel.Caption>
@@ -28,7 +29,7 @@ export const MenuSlider: FC = () => {
         <Carousel.Item>
           <img
             src="..//..//src/assets/1630256733_17.jpg"
-            className="d-block w-75 m-auto py-5 bg-dark"
+            className="d-block w-75 m-auto py-5"
             alt="Sushi and rolls"
           />
           <Carousel.Caption>

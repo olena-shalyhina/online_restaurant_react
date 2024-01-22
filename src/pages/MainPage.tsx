@@ -1,16 +1,12 @@
 import { FC } from 'react';
-import Container from 'react-bootstrap/Container';
-import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
-import { Main } from '../components/Main/Main';
-import '../styles/_mainPage.scss';
+import { AboutContent } from '../components/MainContent/AboutContent';
+import { MenuSlider } from '../components/MainContent/MenuSlider';
 
 export const MainPage: FC = () => {
   return (
-    <Container className="main_page_container" fluid>
-      <Header />
-      <Main />
-      <Footer />
-    </Container>
+    <div className="d-flex flex-column gap-3">
+      <AboutContent />;
+      <MenuSlider />
+    </div>
   );
 };

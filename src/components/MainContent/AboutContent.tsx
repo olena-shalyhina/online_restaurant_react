@@ -4,7 +4,7 @@ export const AboutContent: FC = () => {
   return (
     <div
       id="about-section"
-      className="row d-flex align-items-center p-2 my-5 bg-dark bg-opacity-75"
+      className="row d-flex align-items-center p-2  bg-dark bg-opacity-75"
     >
       <div className="col-sm-12 col-md-6">
         <img

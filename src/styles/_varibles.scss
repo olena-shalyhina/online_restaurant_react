@@ -1,4 +1,4 @@
-@import './breacpoints';
+@import './breakpoints';
 
 //text
 $font-segoe: 'Segoe UI', sans-serif;
@@ -8,4 +8,5 @@ $font-size-main: 18px;
 $bg-color-red: #dc3545;
 $bg-color-black: rgb(33, 37, 41);
 $bg-color-black-opasity: rgba(33, 37, 41, 0.8);
-//$bg-color-black-opasity: rgba(33, 37, 41, 0.8);
+
+$zindex-fixed: 1030;
