@@ -1,8 +1,11 @@
 export interface ICard {
-  id: number;
+  id: string;
   title: string;
   icon: string;
   text: string;
   price: number;
-  food_type: string;
+  dishVariant: string;
 }
+// export interface ICards {
+//   cards: ICard[];
+// }
