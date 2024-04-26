@@ -1,15 +1,7 @@
-// @import '..//..//../styles/varibles.scss';
+@import '..//../styles/varibles';
 
-// .header_container {
-// margin: 0;
-// padding: 0;
-// height: 100vh;
-// position: relative;
-// background-image: url(..//..//../assets/1630213374_11.jpg);
-// background-size: cover;
-// }
-
-// .bg-body-tertiary {
-//   position: sticky;
-//   top: 0;
-// }
+.header_container {
+  position: sticky;
+  z-index: $zindex-sticky;
+  top: 0;
+}

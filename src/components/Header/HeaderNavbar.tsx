@@ -15,8 +15,8 @@ export const HeaderNavbar: FC = () => {
   return (
     <Navbar
       expand="md"
-      className=" row bg-dark bg-opacity-75"
-      data-bs-theme="dark"
+      className="d-flex row bg-secondary"
+      data-bs-theme="secondary"
     >
       <Container>
         <img
@@ -48,7 +48,7 @@ export const HeaderNavbar: FC = () => {
             </NavDropdown> */}
             <Nav.Link href="#">CONTACTS</Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex ">
             <Form.Control
               type="search"
               placeholder="Search"

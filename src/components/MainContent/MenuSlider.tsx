@@ -4,7 +4,7 @@ import '../../styles/mainPage.scss';
 
 export const MenuSlider: FC = () => {
   return (
-    <div className="menu-container row ">
+    <div className="menu-container row mb-5 ">
       <Carousel className=" text-center w-75 m-auto">
         <Carousel.Item interval={5000}>
           <img

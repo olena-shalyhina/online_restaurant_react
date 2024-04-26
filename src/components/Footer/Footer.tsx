@@ -1,10 +1,9 @@
 import { FC } from 'react';
-
 import { Button } from 'react-bootstrap';
 
 export const Footer: FC = () => {
   return (
-    <div className="row bg-dark bg-opacity-75 text-white">
+    <div className="row bg-secondary text-white">
       <div
         id="hours"
         className="col-sm-4 text-center  border-2 border-danger border-end"

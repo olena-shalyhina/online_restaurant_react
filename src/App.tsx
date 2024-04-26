@@ -8,7 +8,7 @@ import './App.scss';
 
 function App() {
   return (
-    <Container className="main_container d-flex flex-column gap-5" fluid>
+    <Container className="main_container d-flex flex-column justify-content-between ">
       <Header />
       <RouteComponent />
       <Footer />

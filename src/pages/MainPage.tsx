@@ -4,8 +4,8 @@ import { MenuSlider } from '../components/MainContent/MenuSlider';
 
 export const MainPage: FC = () => {
   return (
-    <div className="d-flex flex-column gap-3">
-      <AboutContent />;
+    <div className="d-flex flex-column justify-content-between g-5">
+      <AboutContent />
       <MenuSlider />
     </div>
   );
