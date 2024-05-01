@@ -53,7 +53,7 @@ export const Footer: FC = () => {
       <div className="text-center border-2 border-danger border-top p-2">
         &copy; Copyright Restaurant "Starfish" 2022
       </div>
-      <a href="#" className="btn btn-home btn-danger btn-sm">
+      <a href="/" className="btn btn-home btn-danger btn-sm">
         <i className="bi bi-house-fill"></i>
       </a>
     </div>

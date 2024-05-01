@@ -1,58 +1,38 @@
 import { FC, useEffect, useState } from 'react';
-
-import { Card } from '../components/Card';
-import { ICard } from '../types/types';
-
-import { getCards } from '../services/menuServise';
-
-import '../../src/styles/menuPage.scss';
+import { AccordionComponent } from '../components/AccordionComponent';
 import List from '../components/List';
+import { getDishes } from '../services/menuServise';
+import { IDishes } from '../types/types';
+import '../../src/styles/menuPage.scss';
 
 export const MenuPage: FC = () => {
-  const [cards, setCards] = useState<ICard[][]>([]);
+  const [menu, setManu] = useState<IDishes[]>([]);
 
   useEffect(() => {
-    fetchCards();
+    fetchManu();
   }, []);
 
-  const fetchCards = async () => {
-    const data = await getCards();
-    setCards(data);
+  const fetchManu = async () => {
+    const data = await getDishes();
+    setManu(data);
   };
 
-  console.log(cards);
-
   return (
-    <div>
-      <div className="row">
-        <div className="menu-meat-dishes col-lg-4 col-sm-12 mb-3">
-          <h3 className="dish-section-title text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
-            Meat dishes
-          </h3>
-          <List
-            items={cards[0]}
-            renderItem={(card: ICard) => <Card card={card} key={card.id} />}
-          />
-        </div>
-        <div className="menu-meat-dishes col-lg-4 col-sm-12 mb-3">
-          <h3 className="text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
-            Fish dishes
-          </h3>
-          <List
-            items={cards[1]}
-            renderItem={(card: ICard) => <Card card={card} key={card.id} />}
-          />
-        </div>
-        <div className="menu-meat-dishes col-lg-4 col-sm-12 mb-3">
-          <h3 className="text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
-            Sushi
-          </h3>
-          <List
-            items={cards[2]}
-            renderItem={(card: ICard) => <Card card={card} key={card.id} />}
-          />
-        </div>
-      </div>
+    <div className="row d-flex align-items-start">
+      <List
+        items={menu}
+        renderItem={(menuSection: IDishes) => (
+          <div
+            key={menu.indexOf(menuSection)}
+            className="menu-section col-lg-4 col-sm-12 mb-3"
+          >
+            <h3 className="menu-section-title text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
+              {menuSection.typeDishes}
+            </h3>
+            <AccordionComponent dishes={menuSection.dishes} />
+          </div>
+        )}
+      />
     </div>
   );
 };

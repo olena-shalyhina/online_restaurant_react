@@ -1,4 +1,4 @@
-export interface ICard {
+export interface IDish {
   id: string;
   title: string;
   icon: string;
@@ -6,6 +6,7 @@ export interface ICard {
   price: number;
   dishVariant: string;
 }
-// export interface ICards {
-//   cards: ICard[];
-// }
+export interface IDishes {
+  typeDishes: string;
+  dishes: IDish[];
+}

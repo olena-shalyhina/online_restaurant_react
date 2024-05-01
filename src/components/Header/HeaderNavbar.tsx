@@ -21,9 +21,9 @@ export const HeaderNavbar: FC = () => {
       <Container>
         <img
           src="src/assets/Starfish.png"
-          style={{ width: '40px', margin: '5px 10px 0' }}
+          style={{ width: '60px', margin: '0 10px ' }}
         ></img>
-        <Navbar.Brand className="text-danger fw-bold fs-1" href="#">
+        <Navbar.Brand className="text-danger fw-bold fs-1" href="/">
           STARFISH
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" className="text-danger" />
@@ -32,7 +32,7 @@ export const HeaderNavbar: FC = () => {
             className="me-auto my-2 my-md-0 fs-4"
             style={{ maxHeight: '200px' }}
           >
-            <Nav.Link href="/">HOME</Nav.Link>
+            {/* <Nav.Link href="/">HOME</Nav.Link> */}
             <Nav.Link href="/menu">MENU</Nav.Link>
             {/* <NavDropdown title="MENU" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3" className="text-danger">
