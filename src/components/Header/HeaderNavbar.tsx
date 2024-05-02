@@ -46,7 +46,7 @@ export const HeaderNavbar: FC = () => {
                 Sushi and rolls
               </NavDropdown.Item>
             </NavDropdown> */}
-            <Nav.Link href="#">CONTACTS</Nav.Link>
+            <Nav.Link href="/contacts">CONTACTS</Nav.Link>
           </Nav>
           <Form className="d-flex ">
             <Form.Control

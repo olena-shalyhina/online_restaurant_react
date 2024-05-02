@@ -13,7 +13,7 @@ export const AccordionComponent: FC<accordionProps> = ({ dishes }) => {
       <List
         items={dishes}
         renderItem={(item: IDish) => (
-          <Accordion.Item eventKey={item.id}>
+          <Accordion.Item eventKey={item.id} key={item.id}>
             <Accordion.Header>{item.title}</Accordion.Header>
 
             <Accordion.Body className="accordion-body  fst-italic text-dark bg-secondary text-center">

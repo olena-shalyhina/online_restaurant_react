@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { AboutContent } from '../components/MainContent/AboutContent';
-import { MenuSlider } from '../components/MainContent/MenuSlider';
+import { AboutContent } from '../components/AboutContent';
+import { MenuSlider } from '../components/MenuSlider';
 
 export const MainPage: FC = () => {
   return (
