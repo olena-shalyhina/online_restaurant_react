@@ -1,8 +1,11 @@
 import { FC } from 'react';
 import { Button } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
 export const Footer: FC = () => {
-  return (
+  const location = useLocation().pathname;
+
+  return location === '/' ? (
     <div className="row bg-secondary text-white">
       <div
         id="hours"
@@ -50,12 +53,8 @@ export const Footer: FC = () => {
           <i className="bi bi-star-half text-warning p-1"></i>
         </div>
       </div>
-      <div className="text-center border-2 border-danger border-top p-2">
-        &copy; Copyright Restaurant "Starfish" 2022
-      </div>
-      <a href="/" className="btn btn-home btn-danger btn-sm">
-        <i className="bi bi-house-fill"></i>
-      </a>
     </div>
+  ) : (
+    ''
   );
 };

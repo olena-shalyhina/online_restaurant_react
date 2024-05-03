@@ -7,15 +7,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import './Header.module.scss';
-
-export const HeaderNavbar: FC = () => {
+export const Header: FC = () => {
   const location = useLocation();
   console.log(location);
   return (
     <Navbar
-      expand="md"
-      className="d-flex row bg-secondary"
+      sticky="top"
+      expand="lg"
+      className="d-flex row bg-secondary "
       data-bs-theme="secondary"
     >
       <Container>
@@ -26,13 +25,15 @@ export const HeaderNavbar: FC = () => {
         <Navbar.Brand className="text-danger fw-bold fs-1" href="/">
           STARFISH
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" className="text-danger" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className="text-danger"
+        />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
             className="me-auto my-2 my-md-0 fs-4"
             style={{ maxHeight: '200px' }}
           >
-            {/* <Nav.Link href="/">HOME</Nav.Link> */}
             <Nav.Link href="/menu">MENU</Nav.Link>
             {/* <NavDropdown title="MENU" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3" className="text-danger">

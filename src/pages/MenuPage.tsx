@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { AccordionComponent } from '../components/AccordionComponent';
-import List from '../components/List';
+import List from '../components/common/List';
 import { getDishes } from '../services/menuServise';
 import { IDishes } from '../types/types';
 import '../../src/styles/menuPage.scss';
@@ -18,7 +18,7 @@ export const MenuPage: FC = () => {
   };
 
   return (
-    <div className="row d-flex align-items-start">
+    <div className="row d-flex align-items-start justify-content-between ">
       <List
         items={menu}
         renderItem={(menuSection: IDishes) => (

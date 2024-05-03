@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { IDish } from '../types/types';
-import List from './List';
+import List from './common/List';
 
 interface accordionProps {
   dishes: IDish[];
