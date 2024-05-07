@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { AboutContent } from '../components/MainContent/AboutContent';
-import { MenuSlider } from '../components/MainContent/MenuSlider';
+import { AboutComponent } from '../components/AboutComponent';
+import { MenuSliderComponent } from '../components/MenuSliderComponent';
 
 export const MainPage: FC = () => {
   return (
-    <div className="d-flex flex-column gap-3">
-      <AboutContent />;
-      <MenuSlider />
+    <div className="d-flex flex-column g-5">
+      <AboutComponent />
+      <MenuSliderComponent />
     </div>
   );
 };

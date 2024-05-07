@@ -1,5 +1,32 @@
 @import './varibles';
 
 .menu-container {
-  background: rgba(0, 0, 0, 0.75);
+  background-color: #6c757d;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-image: url(../assets/Starfish.png) !important;
+
+  background-color: #4d5155;
+  border: 7px solid #4d5155;
+  border-radius: 50%;
+
+  width: 35px !important;
+  height: 35px !important;
+}
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  width: 35px !important;
+  height: 35px !important;
+  border: 5px solid #4d5155;
+
+  outline: 1px solid #dc3545;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #94f009 !important;
+  width: 5rem !important;
+  height: 5px !important;
+  margin-right: 7px !important;
 }

@@ -1,0 +1,167 @@
+import { IDishes } from '../types/types';
+
+const menu = [
+  {
+    typeDishes: 'Meat dishes',
+    dishes: [
+      {
+        id: 'MD1',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630221119_1.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 10.5,
+        dishVariant: 'Meat dishes',
+      },
+      {
+        id: 'MD2',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630224720_1.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 9.8,
+        dishVariant: 'Meat dishes',
+      },
+      {
+        id: 'MD3',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630227128_2.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 11.2,
+        dishVariant: 'Meat dishes',
+      },
+      {
+        id: 'MD4',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630227128_2.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 11.2,
+        dishVariant: 'Meat dishes',
+      },
+      {
+        id: 'MD5',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630224720_1.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 9.8,
+        dishVariant: 'Meat dishes',
+      },
+      {
+        id: 'MD6',
+        title: 'Beef steak with vegetables',
+        icon: '/src/assets/1630227128_2.jpg',
+        text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
+        price: 11.2,
+        dishVariant: 'Meat dishes',
+      },
+    ],
+  },
+  {
+    typeDishes: 'Fish dishes',
+    dishes: [
+      {
+        id: 'FD1',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630219545_12.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 12.5,
+        dishVariant: 'Fish dishes',
+      },
+      {
+        id: 'FD2',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630213374_11.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 9.8,
+        dishVariant: 'Fish dishes',
+      },
+      {
+        id: 'FD3',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630216693_11.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 11.5,
+        dishVariant: 'Fish dishes',
+      },
+      {
+        id: 'FD4',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630219545_12.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 12.5,
+        dishVariant: 'Fish dishes',
+      },
+      {
+        id: 'FD5',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630213374_11.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 9.8,
+        dishVariant: 'Fish dishes',
+      },
+      {
+        id: 'FD6',
+        title: 'Salmon and salted potatoes',
+        icon: '/src/assets/1630216693_11.jpg',
+        text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
+        price: 11.5,
+        dishVariant: 'Fish dishes',
+      },
+    ],
+  },
+  {
+    typeDishes: 'Sushi',
+    dishes: [
+      {
+        id: 'S1',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630256733_17.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 9.0,
+        dishVariant: 'Sushi',
+      },
+      {
+        id: 'S2',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630223257_11.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 12.5,
+        dishVariant: 'Sushi',
+      },
+      {
+        id: 'S3',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630223257_11.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 11.0,
+        dishVariant: 'Sushi',
+      },
+      {
+        id: 'S4',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630256733_17.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 9.0,
+        dishVariant: 'Sushi',
+      },
+      {
+        id: 'S5',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630223257_11.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 12.5,
+        dishVariant: 'Sushi',
+      },
+      {
+        id: 'S6',
+        title: 'Fujiyama',
+        icon: '/src/assets/1630223257_11.jpg',
+        text: 'Norwegian salmon, cream cheese, avocado',
+        price: 11.0,
+        dishVariant: 'Sushi',
+      },
+    ],
+  },
+];
+
+export const getDishes = async () => {
+  return new Promise<IDishes[]>((resolve) => resolve(menu));
+};
