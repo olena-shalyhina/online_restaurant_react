@@ -5,7 +5,7 @@ import '../styles/mainPage.scss';
 export const MenuSliderComponent: FC = () => {
   return (
     <div className="menu-container row mb-5 ">
-      <Carousel className=" text-center m-auto">
+      <Carousel className="text-center m-auto">
         <Carousel.Item interval={5000}>
           <img
             src="..//..//src/assets/1630224720_1.jpg"
@@ -13,7 +13,7 @@ export const MenuSliderComponent: FC = () => {
             alt="Meat dishes"
           />
           <Carousel.Caption>
-            <h3 className="bg-dark opacity-75  w-50">MEAT DISHES</h3>
+            <h3 className="bg-dark opacity-75  w-100">MEAT DISHES</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={2500}>
@@ -23,7 +23,7 @@ export const MenuSliderComponent: FC = () => {
             alt="Fish dishes"
           />
           <Carousel.Caption>
-            <h3 className="bg-dark opacity-75 w-50">FISH DISHES</h3>
+            <h3 className="bg-dark opacity-75 w-100">FISH DISHES</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -33,7 +33,7 @@ export const MenuSliderComponent: FC = () => {
             alt="Sushi and rolls"
           />
           <Carousel.Caption>
-            <h3 className="bg-dark opacity-75 w-50">SUSHI AND ROLLS</h3>
+            <h3 className="bg-dark opacity-75 w-100">SUSHI AND ROLLS</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

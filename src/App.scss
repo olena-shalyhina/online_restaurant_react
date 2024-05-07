@@ -2,7 +2,6 @@
 
 .main_container {
   min-height: 100vh;
-  // margin-left: 0;
   max-width: 100%;
 }
 
@@ -13,9 +12,7 @@
   width: 1240px;
   min-width: 320px;
   min-height: 100vh;
-  /* font-size: 14px; */
 
-  // text-align: center;
   font-size: $font-size-main;
-  // box-sizing: border-box;
+  box-sizing: border-box;
 }
