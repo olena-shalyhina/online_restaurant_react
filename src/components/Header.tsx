@@ -1,26 +1,28 @@
-import { FC } from 'react';
-import { useLocation } from 'react-router-dom';
+import { FC, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import { ReservationFormComponent } from './ReservationFormComponent';
+
+// import { useLocation } from 'react-router-dom';
 
 export const Header: FC = () => {
-  const location = useLocation();
-  console.log(location);
+  // const location = useLocation();
+  // console.log(location);
+  const [show, setShow] = useState<boolean>(false);
+  const handleShow = () => setShow(true);
   return (
     <Navbar
       sticky="top"
-      expand="lg"
+      expand="md"
       className="d-flex row bg-secondary "
       data-bs-theme="secondary"
     >
       <Container>
         <img
           src="src/assets/Starfish.png"
-          style={{ width: '60px', margin: '0 10px ' }}
+          style={{ width: '50px', margin: '0 10px ' }}
         ></img>
         <Navbar.Brand className="text-danger fw-bold fs-1" href="/">
           STARFISH
@@ -30,34 +32,19 @@ export const Header: FC = () => {
           className="text-danger"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav
-            className="me-auto my-2 my-md-0 fs-4"
-            style={{ maxHeight: '200px' }}
-          >
+          <Nav className="me-auto   fs-4" style={{ maxHeight: '200px' }}>
             <Nav.Link href="/menu">MENU</Nav.Link>
-            {/* <NavDropdown title="MENU" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3" className="text-danger">
-                Meat dishes
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4" className="text-danger">
-                Fish dishes
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5" className="text-danger">
-                Sushi and rolls
-              </NavDropdown.Item>
-            </NavDropdown> */}
             <Nav.Link href="/contacts">CONTACTS</Nav.Link>
           </Nav>
-          <Form className="d-flex ">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2 text-danger"
-              aria-label="Search"
-            />
-            <Button variant="outline-danger">Search</Button>
-          </Form>
+          <div className="d-flex gap-3 justify-content-between ">
+            <Button variant="danger" size="sm">
+              ORDER TO HOME
+            </Button>
+            <Button variant="danger" size="sm" onClick={handleShow}>
+              BOOK A TABLE
+            </Button>
+            <ReservationFormComponent show={show} setShow={setShow} />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

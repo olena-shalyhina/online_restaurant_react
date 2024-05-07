@@ -6,7 +6,7 @@ export const Footer: FC = () => {
   const location = useLocation().pathname;
 
   return location === '/' ? (
-    <div className="row bg-secondary text-white">
+    <div className="row bg-secondary text-white border-danger border-bottom border-2">
       <div
         id="hours"
         className="col-sm-4 text-center  border-2 border-danger border-end"

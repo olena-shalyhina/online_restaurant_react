@@ -8,25 +8,28 @@
 .carousel-control-prev-icon {
   background-image: url(../assets/Starfish.png) !important;
 
-  background-color: #4d5155;
-  border: 7px solid #4d5155;
+  background-color: $bg-secondary;
+  border: 7px solid $bg-secondary;
   border-radius: 50%;
-
-  width: 35px !important;
-  height: 35px !important;
+  outline: 1px solid rgb(234, 198, 198);
+  width: 32px !important;
+  height: 32px !important;
 }
 .carousel-control-next-icon:hover,
-.carousel-control-prev-icon:hover {
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:active,
+.carousel-control-prev-icon:active {
   width: 35px !important;
   height: 35px !important;
-  border: 5px solid #4d5155;
+  border: 5px solid $bg-secondary;
 
-  outline: 1px solid #dc3545;
+  outline: 2px solid $bg-color-red;
 }
 
 .carousel-indicators [data-bs-target] {
   background-color: #94f009 !important;
-  width: 5rem !important;
+  background-color: $bg-color-red !important;
+  width: 3rem !important;
   height: 5px !important;
   margin-right: 7px !important;
 }
