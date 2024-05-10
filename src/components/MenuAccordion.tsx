@@ -7,7 +7,7 @@ interface accordionProps {
   dishes: IDish[];
 }
 
-export const AccordionComponent: FC<accordionProps> = ({ dishes }) => {
+export const MenuAccordion: FC<accordionProps> = ({ dishes }) => {
   return (
     <Accordion defaultActiveKey={dishes[0].id}>
       <List

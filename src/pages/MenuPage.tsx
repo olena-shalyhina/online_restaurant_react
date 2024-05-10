@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { AccordionComponent } from '../components/AccordionComponent';
+import { MenuAccordion } from '../components/MenuAccordion';
 import List from '../components/common/List';
 import { getDishes } from '../services/menuServise';
 import { IDishes } from '../types/types';
@@ -29,7 +29,7 @@ export const MenuPage: FC = () => {
             <h3 className="menu-section-title text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
               {menuSection.typeDishes}
             </h3>
-            <AccordionComponent dishes={menuSection.dishes} />
+            <MenuAccordion dishes={menuSection.dishes} />
           </div>
         )}
       />

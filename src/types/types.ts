@@ -6,7 +6,18 @@ export interface IDish {
   price: number;
   dishVariant: string;
 }
+
 export interface IDishes {
   typeDishes: string;
   dishes: IDish[];
+}
+
+export interface IReservationFormFields {
+  email: string;
+  name: string;
+  phone: string;
+  people: number;
+  date: string;
+  time: string;
+  textarea: string;
 }

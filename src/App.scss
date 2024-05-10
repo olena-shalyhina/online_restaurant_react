@@ -1,18 +1,18 @@
-@import '../src/styles/varibles';
-
-.main_container {
-  min-height: 100vh;
-  max-width: 100%;
-}
+@import '../src/styles/varibles.scss';
 
 #root {
   margin: 0 auto;
-  padding: 0;
+
   box-sizing: border-box;
   width: 1240px;
   min-width: 320px;
   min-height: 100vh;
-
+  overflow: hidden;
+  font-family: $font-segoe;
   font-size: $font-size-main;
-  box-sizing: border-box;
+
+  .main_container {
+    min-height: 100vh;
+    max-width: 100%;
+  }
 }

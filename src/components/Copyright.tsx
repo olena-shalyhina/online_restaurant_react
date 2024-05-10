@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-export const CopyrightComponent: FC = () => {
+export const Copyright: FC = () => {
   return (
     <div className="row bg-secondary text-white">
       <div className="text-center border-2 border-danger p-1">

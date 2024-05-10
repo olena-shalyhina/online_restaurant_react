@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { AboutComponent } from '../components/AboutComponent';
-import { MenuSliderComponent } from '../components/MenuSliderComponent';
+import { About } from '../components/About';
+import { MainSlider } from '../components/MainSlider';
 
 export const MainPage: FC = () => {
   return (
     <div className="d-flex flex-column g-5">
-      <AboutComponent />
-      <MenuSliderComponent />
+      <About />
+      <MainSlider />
     </div>
   );
 };

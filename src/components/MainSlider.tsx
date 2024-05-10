@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 import '../styles/mainPage.scss';
-export const MenuSliderComponent: FC = () => {
+export const MainSlider: FC = () => {
   return (
     <div className="menu-container row mb-5 ">
       <Carousel className="text-center m-auto">

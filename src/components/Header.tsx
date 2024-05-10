@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { ReservationFormComponent } from './ReservationFormComponent';
+import { ReservationModal } from './ReservationModal';
 
 // import { useLocation } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ export const Header: FC = () => {
     <Navbar
       sticky="top"
       expand="md"
-      className="d-flex row bg-secondary "
+      className="row bg-secondary"
       data-bs-theme="secondary"
     >
       <Container>
@@ -43,7 +43,7 @@ export const Header: FC = () => {
             <Button variant="danger" size="sm" onClick={handleShow}>
               BOOK A TABLE
             </Button>
-            <ReservationFormComponent show={show} setShow={setShow} />
+            <ReservationModal show={show} setShow={setShow} />
           </div>
         </Navbar.Collapse>
       </Container>
