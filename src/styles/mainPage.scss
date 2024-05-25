@@ -11,13 +11,13 @@
   background-color: $bg-secondary;
   border: 7px solid $bg-secondary;
   border-radius: 50%;
-  outline: 1px solid rgb(234, 198, 198);
+  outline: 1px solid $bg-color-red;
   width: 32px !important;
   height: 32px !important;
 }
 .carousel-control-next-icon:hover,
-.carousel-control-prev-icon:hover,
 .carousel-control-next-icon:active,
+.carousel-control-prev-icon:hover,
 .carousel-control-prev-icon:active {
   width: 35px !important;
   height: 35px !important;
@@ -26,8 +26,33 @@
   outline: 2px solid $bg-color-red;
 }
 
+.carousel-control-next-icon:hover,
+.carousel-control-next-icon:active {
+  animation: spin_ckw 5s linear 0s infinite;
+}
+@keyframes spin_ckw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-prev-icon:active {
+  animation: spin_с_ckw 5s linear 0s infinite;
+}
+@keyframes spin_с_ckw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .carousel-indicators [data-bs-target] {
-  background-color: #94f009 !important;
   background-color: $bg-color-red !important;
   width: 3rem !important;
   height: 5px !important;
