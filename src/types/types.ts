@@ -19,5 +19,5 @@ export interface IReservationFormFields {
   people: number;
   date: string;
   time: string;
-  textarea: string;
+  textarea?: string;
 }

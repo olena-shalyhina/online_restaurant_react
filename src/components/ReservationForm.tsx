@@ -12,9 +12,16 @@ import { IReservationFormFields } from '../types/types';
 
 interface ReservationFormProps {
   handleClose: () => void | undefined;
+  setShowAlert: React.Dispatch<React.SetStateAction<boolean>>;
+  setReservationData: React.Dispatch<
+    React.SetStateAction<IReservationFormFields>
+  >;
 }
 
-export const ReservationForm: FC<ReservationFormProps> = ({ handleClose }) => {
+export const ReservationForm: FC<ReservationFormProps> = ({
+  setShowAlert,
+  setReservationData,
+}) => {
   const {
     register,
     formState: { errors },
@@ -27,9 +34,10 @@ export const ReservationForm: FC<ReservationFormProps> = ({ handleClose }) => {
   console.log(errors);
 
   const onSubmit: SubmitHandler<IReservationFormFields> = (data) => {
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
+    setReservationData(data);
+    setShowAlert(true);
     reset();
-    handleClose();
   };
 
   return (

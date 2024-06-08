@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import { ReservationForm } from './ReservationForm';
+import { ConfirmReservationAlert } from './ConfirmReservationAlert';
+import { IReservationFormFields } from '../types/types';
 
 interface ReservationModalProps {
   show: boolean;
@@ -12,7 +14,21 @@ export const ReservationModal: FC<ReservationModalProps> = ({
   show,
   setShow,
 }) => {
+  const [reservationData, setReservationData] =
+    useState<IReservationFormFields>({
+      email: '',
+      name: '',
+      phone: '',
+      people: 100000,
+      date: '',
+      time: '',
+    });
+  const [showAlert, setShowAlert] = useState<boolean>(false);
   const handleClose = () => setShow(false);
+
+  // useEffect(() => {
+  //   reserv && setShowAlert(true);
+  // }, [reserv]);
 
   return (
     <>
@@ -21,7 +37,21 @@ export const ReservationModal: FC<ReservationModalProps> = ({
           <Modal.Title>RESERV A TABLE</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bg-secondary">
-          <ReservationForm handleClose={handleClose} />
+          {showAlert ? (
+            <ConfirmReservationAlert
+              showAlert={showAlert}
+              setShowAlert={setShowAlert}
+              handleClose={handleClose}
+              setShowModal={setShow}
+              reservationData={reservationData}
+            />
+          ) : (
+            <ReservationForm
+              handleClose={handleClose}
+              setReservationData={setReservationData}
+              setShowAlert={setShowAlert}
+            />
+          )}
         </Modal.Body>
         <Modal.Footer className="bg-secondary"></Modal.Footer>
       </Modal>
