@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import { ReservationForm } from './ReservationForm';
@@ -19,16 +19,13 @@ export const ReservationModal: FC<ReservationModalProps> = ({
       email: '',
       name: '',
       phone: '',
-      people: 100000,
+      people: 2,
       date: '',
       time: '',
+      textarea: '',
     });
   const [showAlert, setShowAlert] = useState<boolean>(false);
   const handleClose = () => setShow(false);
-
-  // useEffect(() => {
-  //   reserv && setShowAlert(true);
-  // }, [reserv]);
 
   return (
     <>
@@ -44,12 +41,14 @@ export const ReservationModal: FC<ReservationModalProps> = ({
               handleClose={handleClose}
               setShowModal={setShow}
               reservationData={reservationData}
+              setReservationData={setReservationData}
             />
           ) : (
             <ReservationForm
               handleClose={handleClose}
               setReservationData={setReservationData}
               setShowAlert={setShowAlert}
+              reservationData={reservationData}
             />
           )}
         </Modal.Body>

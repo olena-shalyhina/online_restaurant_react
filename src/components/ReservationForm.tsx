@@ -16,19 +16,24 @@ interface ReservationFormProps {
   setReservationData: React.Dispatch<
     React.SetStateAction<IReservationFormFields>
   >;
+  reservationData: IReservationFormFields;
 }
 
 export const ReservationForm: FC<ReservationFormProps> = ({
   setShowAlert,
   setReservationData,
+  reservationData,
 }) => {
+  console.log(reservationData);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
-    reset,
+    // reset,
   } = useForm<IReservationFormFields>({
     mode: 'onChange',
+    defaultValues: reservationData,
   });
 
   console.log(errors);
@@ -37,11 +42,11 @@ export const ReservationForm: FC<ReservationFormProps> = ({
     // alert(JSON.stringify(data));
     setReservationData(data);
     setShowAlert(true);
-    reset();
+    // reset();
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
         <Form.Label className="text-warning">E-mail</Form.Label>
         <Form.Control
