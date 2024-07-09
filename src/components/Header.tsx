@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
+import Cart from '../assets/icons/cart-shopping-solid.svg';
 
 // import { useLocation } from 'react-router-dom';
 
@@ -37,12 +38,15 @@ export const Header: FC = () => {
             <Nav.Link href="/contacts">CONTACTS</Nav.Link>
           </Nav>
           <div className="d-flex gap-3 justify-content-between ">
-            <Button variant="danger" size="sm">
-              ORDER TO HOME
-            </Button>
             <Button variant="danger" size="sm" onClick={handleShow}>
               BOOK A TABLE
             </Button>
+            <Button variant="danger" size="sm">
+              ORDER TO HOME
+            </Button>
+            <a className="social__link px-2" href="#">
+              <img className="social__img" src={Cart} alt="facebook icon"></img>
+            </a>
             <ReservationModal show={show} setShow={setShow} />
           </div>
         </Navbar.Collapse>

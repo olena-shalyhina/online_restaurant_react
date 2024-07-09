@@ -1,5 +1,9 @@
 import { FC } from 'react';
 
+import ReactPlayer from 'react-player';
+// import video from '../assets/124830-732633115_small.mp4';
+import video from '../assets/8922353-hd_2048_1080_25fps.mp4';
+
 import { Button } from 'react-bootstrap';
 import Facebook from '../assets/icons/facebook.svg';
 import Instagram from '../assets/icons/instagram.svg';
@@ -8,13 +12,27 @@ import Whatsapp from '../assets/icons/whatsapp.svg';
 export const ContactsPage: FC = () => {
   return (
     <div className="row  my-3">
-      <div className="col-sm-12  col-md-8 bg-secondary  justify-content-center p-0">
-        {/* <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16222.906214446677!2d24.69979233743312!3d59.452031158536485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469293480047e735%3A0xc2160e3032b95a4f!2zw5xsbw!5e0!3m2!1sru!2see!4v1714657727481!5m2!1sru!2see"
-          height="100%"
+      <div className="col-sm-12  col-md-8 bg-secondary  justify-content-center py-2 ">
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
           width="100%"
-          loading="lazy"
-        ></iframe> */}
+          height="100%"
+          object-fit="cover"
+        ></video>
+        {/* <ReactPlayer
+          url={video}
+          width="100%"
+          height="420px"
+          autoPlay={true}
+          // plaing
+          controls={true}
+          volume={1}
+          loop={true}
+          ratio={16 / 9}
+        /> */}
       </div>
 
       <div className="col-sm-12 col-md-4 bg-secondary d-flex flex-column align-items-center p-3 ">
