@@ -39,7 +39,6 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   console.log(errors);
 
   const onSubmit: SubmitHandler<IReservationFormFields> = (data) => {
-    // alert(JSON.stringify(data));
     setReservationData(data);
     setShowAlert(true);
     // reset();
