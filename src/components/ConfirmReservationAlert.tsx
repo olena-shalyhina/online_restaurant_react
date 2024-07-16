@@ -26,11 +26,11 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
   const [reserved, setReserved] = useState<boolean>(false);
 
   return (
-    <Alert show={showAlert} variant="danger" className="mb-0">
+    <Alert show={showAlert} variant="danger" className="text-center mb-0">
       {reserved ? (
         <>
           <Alert.Heading>Reservation completed successfully!</Alert.Heading>
-          <p className="text-center">
+          <p>
             <span>{name}, we will be glad to see you</span>
             <br />
             <span>
@@ -79,7 +79,7 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                     time: '',
                     textarea: '',
                   });
-                }, 10000);
+                }, 3000);
               }}
               variant="danger"
               className="w-25"

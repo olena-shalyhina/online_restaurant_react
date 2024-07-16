@@ -52,7 +52,6 @@ export const ContactsPage: FC = () => {
             <p>Sun-Thurs: 11:15am - 10:00pm</p>
             <p>Fri: 11:15am - 2:30pm</p>
             <p>Saturday Closed</p>
-            {/* <p className="d-sm-none"></p> */}
           </div>
 
           <div id="address" className=" text-center pb-3">

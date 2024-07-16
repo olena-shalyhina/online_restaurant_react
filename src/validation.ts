@@ -3,4 +3,4 @@ export const emailValidation =
 
 export const nameValidation = /^([a-zA-Z'-\s]{2,30}|[а-яА-ЯёЁ'-\s]{2,30})$/;
 
-export const phoneValidation = /^[+]{1}[0-9]{3}\s[0-9]{8}$/;
+export const phoneValidation = /^[+]{1}[0-9]{3}\s[0-9]{7,15}$/;
