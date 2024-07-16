@@ -9,7 +9,7 @@ import './App.scss';
 
 function App() {
   return (
-    <Container className="main_container d-flex flex-column justify-content-between ">
+    <Container className="main_container d-flex flex-column justify-content-between">
       <Header />
       <RouteComponent />
       <Footer />

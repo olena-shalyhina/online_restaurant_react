@@ -11,17 +11,24 @@ import Telegram from '../assets/icons/telegram.svg';
 import Whatsapp from '../assets/icons/whatsapp.svg';
 export const ContactsPage: FC = () => {
   return (
-    <div className="row  my-3">
-      <div className="col-sm-12  col-md-8 bg-secondary  justify-content-center py-2 ">
-        <video
-          src={video}
-          autoPlay
-          loop
-          muted
+    <div className="row ">
+      <video
+        src={video}
+        autoPlay
+        loop
+        muted
+        width="100%"
+        height="100%"
+        object-fit="cover"
+      ></video>
+      <div className="col-sm-12  col-md-8 bg-secondary  justify-content-center ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4057.6504541433724!2d24.766426749512696!3d59.43598939866435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469293595ccf02c1%3A0x4566068c897610ff!2z0KDQsNGD0LAsINCi0LDQu9C70LjQvQ!5e0!3m2!1sru!2see!4v1721038610331!5m2!1sru!2see"
           width="100%"
-          height="100%"
-          object-fit="cover"
-        ></video>
+          height="420px"
+          loading="lazy"
+          className="py-3"
+        ></iframe>
         {/* <ReactPlayer
           url={video}
           width="100%"
@@ -35,7 +42,10 @@ export const ContactsPage: FC = () => {
         /> */}
       </div>
 
-      <div className="col-sm-12 col-md-4 bg-secondary d-flex flex-column align-items-center p-3 ">
+      <div
+        className="col-sm-12 col-md-4  bg-secondary d-flex flex-column align-items-center
+       p-3 "
+      >
         <div>
           <div id="hours" className=" text-center  ">
             <p className="text-danger p-1 fw-bold">HOURS</p>

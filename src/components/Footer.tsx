@@ -6,21 +6,15 @@ export const Footer: FC = () => {
   const location = useLocation().pathname;
 
   return location === '/' ? (
-    <div className="row bg-secondary text-white border-danger border-bottom border-2">
-      <div
-        id="hours"
-        className="col-sm-4 text-center  border-2 border-danger border-end"
-      >
+    <div className="row d-flex bg-secondary text-white mb-5 ">
+      <div id="hours" className="col-sm-4 text-center">
         <p className="text-danger p-3 fw-bold">HOURS</p>
         <p>Sun-Thurs: 11:15am - 10:00pm</p>
         <p>Fri: 11:15am - 2:30pm</p>
         <p>Saturday Closed</p>
         <p className="d-sm-none"></p>
       </div>
-      <div
-        id="address"
-        className="col-sm-4 text-center border-2 border-danger border-end"
-      >
+      <div id="address" className="col-sm-4 text-center">
         <p className="text-danger py-3 fw-bold">ADDRESS</p>
         10152 Tallinn Raua tn 628
         <p className="text-warning">* 24/7 free food delivery</p>

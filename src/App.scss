@@ -2,18 +2,16 @@
 
 #root {
   margin: 0 auto;
-
   box-sizing: border-box;
-  width: 1240px;
-  min-width: 320px;
-  min-height: 100vh;
+  // width: 1240px;
   overflow: hidden;
   font-family: $font-segoe;
   font-size: $font-size-main;
-  // background-color: $secondary;
+}
+.main_container {
+  background-color: $bg-secondary;
 
-  .main_container {
-    min-height: 100vh;
-    max-width: 100%;
-  }
+  min-height: calc(100vh - 80px);
+  max-width: 1240px;
+  min-width: 320px;
 }

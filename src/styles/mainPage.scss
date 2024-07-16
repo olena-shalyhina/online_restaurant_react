@@ -1,5 +1,37 @@
 @import './varibles';
 
+#about-section {
+  // position: relative;
+  overflow: hidden;
+  background-image: url(../assets/1655680286_59.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 86vh;
+  margin: 0 auto;
+}
+
+p.text-animate {
+  position: relative;
+  background: rgba(27, 26, 26, 0.7);
+  animation-duration: 5s;
+  animation-name: slidein;
+  // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+  //   'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: normal !important;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
 .menu-container {
   background-color: #6c757d;
 }
@@ -7,48 +39,34 @@
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   background-image: url(../assets/Starfish.png) !important;
-
-  background-color: $bg-secondary;
-  border: 7px solid $bg-secondary;
+  background: rgba(17, 18, 19, 0.5);
+  border: solid 5px rgba(17, 18, 19, 0.03);
   border-radius: 50%;
-  outline: 1px solid $bg-color-red;
-  width: 32px !important;
-  height: 32px !important;
-}
-.carousel-control-next-icon:hover,
-.carousel-control-next-icon:active,
-.carousel-control-prev-icon:hover,
-.carousel-control-prev-icon:active {
-  width: 35px !important;
-  height: 35px !important;
-  border: 5px solid $bg-secondary;
-
-  outline: 2px solid $bg-color-red;
 }
 
 .carousel-control-next-icon:hover,
 .carousel-control-next-icon:active {
-  animation: spin_ckw 5s linear 0s infinite;
+  animation: spin_ckw 3s linear 0s infinite alternate;
 }
 @keyframes spin_ckw {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.5);
   }
 }
 
 .carousel-control-prev-icon:hover,
 .carousel-control-prev-icon:active {
-  animation: spin_с_ckw 5s linear 0s infinite;
+  animation: spin_с_ckw 3s linear 0s infinite alternate;
 }
 @keyframes spin_с_ckw {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 

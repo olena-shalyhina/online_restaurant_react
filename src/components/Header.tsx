@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
-import Cart from '../assets/icons/cart-shopping-solid.svg';
+import { Cart } from './Cart';
 
 // import { useLocation } from 'react-router-dom';
 
@@ -15,10 +15,10 @@ export const Header: FC = () => {
   const handleShow = () => setShow(true);
   return (
     <Navbar
-      sticky="top"
-      expand="md"
-      className="row bg-secondary"
-      data-bs-theme="secondary"
+      fixed="top"
+      expand="lg"
+      className="bg-secondary border-2 border-bottom border-danger"
+      data-bs-theme="dark"
     >
       <Container>
         <img
@@ -33,20 +33,21 @@ export const Header: FC = () => {
           className="text-danger"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto   fs-4" style={{ maxHeight: '200px' }}>
+          <Nav
+            className="me-auto  text-light fs-4"
+            style={{ maxHeight: '200px' }}
+          >
             <Nav.Link href="/menu">MENU</Nav.Link>
             <Nav.Link href="/contacts">CONTACTS</Nav.Link>
           </Nav>
-          <div className="d-flex gap-3 justify-content-between ">
+          <div className="d-flex gap-3 justify-content-between">
             <Button variant="danger" size="sm" onClick={handleShow}>
               BOOK A TABLE
             </Button>
             <Button variant="danger" size="sm">
               ORDER TO HOME
             </Button>
-            <a className="social__link px-2" href="#">
-              <img className="social__img" src={Cart} alt="facebook icon"></img>
-            </a>
+            <Cart />
             <ReservationModal show={show} setShow={setShow} />
           </div>
         </Navbar.Collapse>
