@@ -4,7 +4,7 @@ import { MainSlider } from '../components/MainSlider';
 
 export const MainPage: FC = () => {
   return (
-    <div className="row d-flex flex-column g-5 bg-secondary">
+    <div className="d-flex flex-column align-items-cener gap-5 ">
       <About />
       <MainSlider />
     </div>

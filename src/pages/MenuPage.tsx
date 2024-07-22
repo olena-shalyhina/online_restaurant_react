@@ -18,7 +18,7 @@ export const MenuPage: FC = () => {
   };
 
   return (
-    <div className="row d-flex align-items-start justify-content-center g-3 ">
+    <div className="row d-flex align-items-start justify-content-center g-3">
       <List
         items={menu}
         renderItem={(menuSection: IDishes) => (
@@ -26,7 +26,7 @@ export const MenuPage: FC = () => {
             key={menu.indexOf(menuSection)}
             className="menu-section col-lg-4  col-md-6 col-sm-12 mb-1"
           >
-            <h3 className="menu-section-title text-uppercase text-dark bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
+            <h3 className="menu-section-title text-uppercase text-light bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
               {menuSection.typeDishes}
             </h3>
             <MenuAccordion dishes={menuSection.dishes} />

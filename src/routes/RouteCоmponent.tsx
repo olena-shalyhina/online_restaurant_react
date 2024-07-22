@@ -6,9 +6,6 @@ import { ContactsPage } from '../pages/ContactsPage';
 // import { Notfoundpage } from '../pages/Notfoundpage';
 
 function RouteComponent() {
-  // const env = import.meta.env.NODE_ENV;
-  // const url = import.meta.env[`VITE_REACT_APP_HOME_URL_${env}`];
-
   return (
     <Routes>
       <Route index element={<MainPage />} />

@@ -11,6 +11,10 @@ import { Cart } from './Cart';
 export const Header: FC = () => {
   // const location = useLocation();
   // console.log(location);
+
+  // const URL = import.meta.env.VITE_BASE_URL;
+  // console.log(URL);
+
   const [show, setShow] = useState<boolean>(false);
   const handleShow = () => setShow(true);
   return (
@@ -22,6 +26,7 @@ export const Header: FC = () => {
     >
       <Container>
         <img
+          // src={`${URL}Starfish.png`}
           src="src/assets/Starfish.png"
           style={{ width: '50px', margin: '0 10px ' }}
         ></img>

@@ -16,7 +16,7 @@ export const MenuAccordion: FC<accordionProps> = ({ dishes }) => {
           <Accordion.Item eventKey={item.id} key={item.id}>
             <Accordion.Header>{item.title}</Accordion.Header>
 
-            <Accordion.Body className="accordion-body  fst-italic text-dark bg-secondary text-center ">
+            <Accordion.Body className="accordion-body  fst-italic text-dark bg-secondary text-center">
               <div className="wrapper">
                 <img src={item.icon} alt="Meat dishes"></img>
                 <p className="text-description">{item.text}</p>

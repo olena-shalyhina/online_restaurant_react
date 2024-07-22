@@ -46,3 +46,22 @@
 //   color: #f5f5f5;
 //   z-index: 10;
 // }
+
+.menu-section-title {
+  animation-duration: 2s;
+  animation-name: menu_slidein;
+}
+
+@keyframes menu_slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+    // transform: rotate(-10deg) scale(0);
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    // transform: rotate(0deg) scale(1);
+  }
+}
