@@ -10,7 +10,7 @@ export const MenuPage: FC = () => {
 
   useEffect(() => {
     fetchManu();
-  }, []);
+  }, [menu]);
 
   const fetchManu = async () => {
     const data = await getDishes();
@@ -18,7 +18,7 @@ export const MenuPage: FC = () => {
   };
 
   return (
-    <div className="row d-flex align-items-start justify-content-center g-3">
+    <div className="row d-flex align-items-start justify-content-center g-3 mb-5">
       <List
         items={menu}
         renderItem={(menuSection: IDishes) => (

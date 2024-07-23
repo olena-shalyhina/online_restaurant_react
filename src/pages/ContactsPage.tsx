@@ -6,7 +6,7 @@ import '../styles/contactsPage.scss';
 
 export const ContactsPage: FC = () => {
   return (
-    <div className="contacts bg-secondary row gap-3  mb-3">
+    <div className="contacts bg-secondary row gap-3  mb-5">
       <video
         src={video}
         autoPlay

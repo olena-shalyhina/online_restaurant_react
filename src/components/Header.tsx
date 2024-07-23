@@ -18,7 +18,9 @@ export const Header: FC = () => {
 
   const [show, setShow] = useState<boolean>(false);
   const handleShow = () => setShow(true);
+
   return (
+    // <Container fluid>
     <Navbar
       fixed="top"
       expand="lg"
@@ -64,5 +66,6 @@ export const Header: FC = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    // </Container>
   );
 };

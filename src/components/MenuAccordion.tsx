@@ -2,12 +2,18 @@ import { FC } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { IDish } from '../types/types';
 import List from './common/List';
+import { useAppDispatch } from '../redux/store/reduxHook';
+import { addDish } from '../redux/store/selectedDishSlice';
 
-interface accordionProps {
+interface AccordionProps {
   dishes: IDish[];
 }
 
-export const MenuAccordion: FC<accordionProps> = ({ dishes }) => {
+export const MenuAccordion: FC<AccordionProps> = ({ dishes }) => {
+  const dispatch = useAppDispatch();
+  // const orderDish = () => {
+  //   localStorage.setItem("dish", JSON.stringify(dish: IDish))
+  // };
   return (
     <Accordion defaultActiveKey={dishes[0].id}>
       <List
@@ -24,7 +30,13 @@ export const MenuAccordion: FC<accordionProps> = ({ dishes }) => {
                   &#8364; {item.price.toFixed(2)}
                 </p>
               </div>
-              <button className="btn btn-danger btn-sm text-uppercase mt-1">
+              <button
+                className="btn btn-danger btn-sm text-uppercase mt-1"
+                onClick={() => {
+                  dispatch(addDish(item));
+                  console.log(item);
+                }}
+              >
                 Order
               </button>
             </Accordion.Body>
