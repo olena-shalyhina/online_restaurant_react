@@ -6,10 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
 import { Cart } from './Cart';
 
-// import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Header: FC = () => {
   // const location = useLocation();
+
   // console.log(location);
 
   // const URL = import.meta.env.VITE_BASE_URL;
@@ -49,7 +50,12 @@ export const Header: FC = () => {
             <Button variant="danger" size="sm" onClick={handleShow}>
               BOOK A TABLE
             </Button>
-            <Button variant="danger" size="sm">
+            <Button
+              variant="danger"
+              size="sm"
+              href="/menu"
+              className="d-flex align-items-center"
+            >
               ORDER TO HOME
             </Button>
             <Cart />
