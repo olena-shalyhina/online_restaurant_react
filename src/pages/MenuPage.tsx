@@ -17,22 +17,21 @@ export const MenuPage: FC = () => {
     setManu(data);
   };
 
+  const createSection = (menuSection: IDishes) => (
+    <div
+      key={menu.indexOf(menuSection)}
+      className="menu-section col-lg-4  col-md-6 col-sm-12 mb-1"
+    >
+      <h3 className="menu-section-title text-uppercase text-light bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
+        {menuSection.typeDishes}
+      </h3>
+      <MenuAccordion dishes={menuSection.dishes} />
+    </div>
+  );
+
   return (
     <div className="row d-flex align-items-start justify-content-center g-3 mb-5">
-      <List
-        items={menu}
-        renderItem={(menuSection: IDishes) => (
-          <div
-            key={menu.indexOf(menuSection)}
-            className="menu-section col-lg-4  col-md-6 col-sm-12 mb-1"
-          >
-            <h3 className="menu-section-title text-uppercase text-light bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger">
-              {menuSection.typeDishes}
-            </h3>
-            <MenuAccordion dishes={menuSection.dishes} />
-          </div>
-        )}
-      />
+      <List items={menu} renderItem={createSection} />
     </div>
   );
 };

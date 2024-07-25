@@ -11,6 +11,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 10.5,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
       {
         id: 'MD2',
@@ -19,6 +20,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 9.8,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
       {
         id: 'MD3',
@@ -27,6 +29,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 11.2,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
       {
         id: 'MD4',
@@ -35,6 +38,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 11.2,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
       {
         id: 'MD5',
@@ -43,6 +47,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 9.8,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
       {
         id: 'MD6',
@@ -51,6 +56,7 @@ const menu = [
         text: 'Tender tenderloin of grilled beef, vegetables and fragrant spices',
         price: 11.2,
         dishVariant: 'Meat dishes',
+        number: 0,
       },
     ],
   },
@@ -64,6 +70,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 12.5,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
       {
         id: 'FD2',
@@ -72,6 +79,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 9.8,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
       {
         id: 'FD3',
@@ -80,6 +88,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 11.5,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
       {
         id: 'FD4',
@@ -88,6 +97,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 12.5,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
       {
         id: 'FD5',
@@ -96,6 +106,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 9.8,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
       {
         id: 'FD6',
@@ -104,6 +115,7 @@ const menu = [
         text: 'Toasted salmon, salted potatoes, root vegetabls and onion',
         price: 11.5,
         dishVariant: 'Fish dishes',
+        number: 0,
       },
     ],
   },
@@ -117,6 +129,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 9.0,
         dishVariant: 'Sushi',
+        number: 0,
       },
       {
         id: 'S2',
@@ -125,6 +138,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 12.5,
         dishVariant: 'Sushi',
+        number: 0,
       },
       {
         id: 'S3',
@@ -133,6 +147,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 11.0,
         dishVariant: 'Sushi',
+        number: 0,
       },
       {
         id: 'S4',
@@ -141,6 +156,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 9.0,
         dishVariant: 'Sushi',
+        number: 0,
       },
       {
         id: 'S5',
@@ -149,6 +165,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 12.5,
         dishVariant: 'Sushi',
+        number: 0,
       },
       {
         id: 'S6',
@@ -157,6 +174,7 @@ const menu = [
         text: 'Norwegian salmon, cream cheese, avocado',
         price: 11.0,
         dishVariant: 'Sushi',
+        number: 0,
       },
     ],
   },

@@ -6,13 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
 import { Cart } from './Cart';
 
-import { Link, useLocation } from 'react-router-dom';
+// import { Link, useLocation } from 'react-router-dom';
 
 export const Header: FC = () => {
   // const location = useLocation();
-
   // console.log(location);
-
   // const URL = import.meta.env.VITE_BASE_URL;
   // console.log(URL);
 
@@ -20,7 +18,6 @@ export const Header: FC = () => {
   const handleShow = () => setShow(true);
 
   return (
-    // <Container fluid>
     <Navbar
       fixed="top"
       expand="lg"
@@ -31,41 +28,43 @@ export const Header: FC = () => {
         <img
           // src={`${URL}Starfish.png`}
           src="src/assets/Starfish.png"
-          style={{ width: '50px', margin: '0 10px ' }}
+          style={{ width: '60px', margin: '0 10px ' }}
         ></img>
+
         <Navbar.Brand className="text-danger fw-bold fs-1" href="/">
           STARFISH
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           className="text-danger"
         />
+        <Cart />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
-            className="me-auto  text-light fs-4"
+            className="me-auto  text-light fs-5"
             style={{ maxHeight: '200px' }}
           >
             <Nav.Link href="/menu">MENU</Nav.Link>
             <Nav.Link href="/contacts">CONTACTS</Nav.Link>
           </Nav>
-          <div className="d-flex gap-3 justify-content-between">
-            <Button variant="danger" size="sm" onClick={handleShow}>
+          <div className="d-flex gap-3 justify-content-start">
+            <Button variant="danger" onClick={handleShow}>
               BOOK A TABLE
             </Button>
             <Button
               variant="danger"
-              size="sm"
+              // size="sm"
               href="/menu"
               className="d-flex align-items-center"
             >
               ORDER TO HOME
             </Button>
-            <Cart />
+
             <ReservationModal show={show} setShow={setShow} />
           </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    // </Container>
   );
 };

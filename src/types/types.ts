@@ -5,6 +5,7 @@ export interface IDish {
   text: string;
   price: number;
   dishVariant: string;
+  number: number;
 }
 
 export interface IDishes {

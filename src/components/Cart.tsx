@@ -1,31 +1,53 @@
 import { FC, useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import { SelectedDishesList } from './SelectedDihesList';
+import { Modal } from 'react-bootstrap';
+
+import '../styles/cart.scss';
+import { useAppSelector } from '../redux/store/reduxHook';
 
 export const Cart: FC = () => {
   const [show, setShow] = useState<boolean>(false);
-
   const handleClose = () => setShow(false);
-  const toggleShow = () => setShow((s) => !s);
+  const handleShow = () => setShow(true);
+
+  const selectedDishes = useAppSelector((state) => state.dishes.list);
+  console.log(selectedDishes, '--- массив выбранных блюд в state ---');
+
+  const sumSelectedDishesNumber = selectedDishes.reduce(
+    (total: number, currentDish) => {
+      return total + currentDish.number;
+    },
+    0,
+  );
+
   return (
-    <>
-      <Button variant="danger" onClick={toggleShow} className="me-2">
-        <i className="bi bi-cart-check-fill fs-5"></i>
+    <div className="cart_wrapper mx-2">
+      <Button variant="danger" onClick={handleShow} className="ml-5">
+        <i className="bi bi-cart-check-fill fs-6"></i>
       </Button>
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        variant="dark"
-        className="bg-secondary"
-      >
-        <Offcanvas.Header closeButton className="bg-danger">
-          <Offcanvas.Title className="bg-danger">YOUR ORDERS</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
+      {selectedDishes.length > 0 && (
+        <div className="cart_orders_count fw-bold text-success bg-warning">
+          {sumSelectedDishesNumber}
+        </div>
+      )}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header className="bg-secondary" closeButton>
+          <Modal.Title className="text-light">YOUR ORDER</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
           <SelectedDishesList />
-        </Offcanvas.Body>
-      </Offcanvas>
-    </>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="success" onClick={handleClose}>
+            Go to pay
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   );
 };

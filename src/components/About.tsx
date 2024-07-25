@@ -53,7 +53,12 @@ export const About: FC = () => {
           </Button>
         </div>
         <div>Lorem ipsum dolor!</div>
-        <Button variant="danger" size="lg" href="tel:+37233344555">
+        <Button
+          variant="danger"
+          size="sm"
+          href="tel:+37233344555"
+          className="text-light fs-5"
+        >
           <i className="bi bi-phone"></i> (+372) 333-44-555
         </Button>
       </div>

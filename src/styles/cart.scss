@@ -1,0 +1,15 @@
+.cart_wrapper {
+  position: relative;
+}
+
+.cart_orders_count {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  left: 30px;
+}

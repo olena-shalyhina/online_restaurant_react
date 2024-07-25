@@ -34,7 +34,7 @@ export const MenuAccordion: FC<AccordionProps> = ({ dishes }) => {
                 className="btn btn-danger btn-sm text-uppercase mt-1"
                 onClick={() => {
                   dispatch(addDish(item));
-                  console.log(item);
+                  console.log(item, '--- карточка, по которой кликнули ---');
                 }}
               >
                 Order
