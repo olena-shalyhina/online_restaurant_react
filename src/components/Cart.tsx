@@ -4,13 +4,15 @@ import { SelectedDishesList } from './SelectedDihesList';
 import { Modal } from 'react-bootstrap';
 
 import '../styles/cart.scss';
-import { useAppSelector } from '../redux/store/reduxHook';
+import { useAppSelector, useAppDispatch } from '../redux/store/reduxHook';
+import { clearList } from '../redux/store/selectedDishSlice';
 
 export const Cart: FC = () => {
   const [show, setShow] = useState<boolean>(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const dispatch = useAppDispatch();
   const selectedDishes = useAppSelector((state) => state.dishes.list);
   console.log(selectedDishes, '--- массив выбранных блюд в state ---');
 
@@ -39,13 +41,22 @@ export const Cart: FC = () => {
         <Modal.Body>
           <SelectedDishesList />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="success" onClick={handleClose}>
-            Go to pay
-          </Button>
+        <Modal.Footer className="d-flex justify-content-between">
+          {selectedDishes.length > 0 && (
+            <Button variant="danger" onClick={() => dispatch(clearList())}>
+              Clear
+            </Button>
+          )}
+          <div className="d-flex gap-2">
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            {selectedDishes.length > 0 && (
+              <Button variant="success" onClick={handleClose}>
+                Go to pay
+              </Button>
+            )}
+          </div>
         </Modal.Footer>
       </Modal>
     </div>
