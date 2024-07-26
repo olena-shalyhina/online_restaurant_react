@@ -28,7 +28,9 @@ export const SelectedDishesList: FC = () => {
           </div>
         </div>
       ) : (
-        <div>Your basket is empty. Go to the menu and place your order.</div>
+        <div>
+          Your basket is empty. Go to the menu and place your order, please.
+        </div>
       )}
     </div>
   );
