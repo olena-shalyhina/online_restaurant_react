@@ -1,10 +1,12 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
 import { Cart } from './Cart';
+import { useAppSelector } from '../redux/store/reduxHook';
+import { createStorage } from '../utils/localStorageFunctions';
 
 // import { Link, useLocation } from 'react-router-dom';
 
@@ -13,6 +15,16 @@ export const Header: FC = () => {
   // console.log(location);
   // const URL = import.meta.env.VITE_BASE_URL;
   // console.log(URL);
+
+  const selectedDishes = useAppSelector((state) => state.dishes.list);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      createStorage(selectedDishes);
+    }
+    isMounted.current = true;
+  }, [selectedDishes]);
 
   const [show, setShow] = useState<boolean>(false);
   const handleShow = () => setShow(true);

@@ -1,15 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getStorage } from '../../utils/localStorageFunctions';
 
 import { IDish } from '../../types/types';
+import { calcTotalPrice } from '../../utils/calcTotalPrice';
 
 interface ISelectedDishesState {
   list: IDish[];
   total: number;
 }
 
+const { listData, totalData } = getStorage();
+
 const initialState: ISelectedDishesState = {
-  list: [],
-  total: 0,
+  list: listData,
+  total: totalData,
 };
 
 export const selectedDishesSlice = createSlice({
@@ -27,9 +31,8 @@ export const selectedDishesSlice = createSlice({
           number: 1,
         });
       }
-      state.total = state.list.reduce((total, currentDish) => {
-        return total + currentDish.number * currentDish.price;
-      }, 0);
+
+      state.total = calcTotalPrice(state.list);
     },
 
     removeDish(state, action: PayloadAction<string>) {
@@ -40,9 +43,7 @@ export const selectedDishesSlice = createSlice({
       } else
         state.list = state.list.filter((dish) => dish.id !== action.payload);
 
-      state.total = state.list.reduce((total, currentDish) => {
-        return total + currentDish.number * currentDish.price;
-      }, 0);
+      state.total = calcTotalPrice(state.list);
     },
 
     clearList(state) {
