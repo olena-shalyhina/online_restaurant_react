@@ -7,7 +7,9 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter
+      basename={import.meta.env.DEV ? '/' : '/online_restaurant_react/'}
+    >
       <App />
     </BrowserRouter>
   </Provider>,
