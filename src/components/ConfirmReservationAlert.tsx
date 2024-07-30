@@ -14,8 +14,8 @@ interface ConfirmReservationAlertProps {
 }
 
 export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
-  setShowAlert,
   showAlert,
+  setShowAlert,
   handleClose,
   setShowModal,
   reservationData,
@@ -65,11 +65,10 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
             <Button
               onClick={() => {
                 setReserved(true);
-
                 setTimeout(() => {
                   setShowAlert(false);
                   handleClose();
-
+                  setShowModal(false);
                   setReservationData({
                     email: '',
                     name: '',

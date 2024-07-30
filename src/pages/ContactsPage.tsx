@@ -1,7 +1,7 @@
-import { FC, lazy } from 'react';
+import { FC } from 'react';
 
 import video from '../assets/124830-732633115_small.mp4';
-import '../styles/contactsPage.scss';
+
 // import video from '../assets/8922353-hd_2048_1080_25fps.mp4';
 
 export const ContactsPage: FC = () => {

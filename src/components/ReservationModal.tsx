@@ -29,7 +29,7 @@ export const ReservationModal: FC<ReservationModalProps> = ({
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} className="">
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className="bg-danger">
           <Modal.Title>RESERV A TABLE</Modal.Title>
         </Modal.Header>
@@ -45,7 +45,6 @@ export const ReservationModal: FC<ReservationModalProps> = ({
             />
           ) : (
             <ReservationForm
-              handleClose={handleClose}
               setReservationData={setReservationData}
               setShowAlert={setShowAlert}
               reservationData={reservationData}

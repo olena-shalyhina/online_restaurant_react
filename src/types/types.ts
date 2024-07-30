@@ -2,7 +2,7 @@ export interface IDish {
   id: string;
   title: string;
   icon: string;
-  text: string;
+  text?: string;
   price: number;
   dishVariant: string;
   number: number;

@@ -1,18 +1,23 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ReservationModal } from './ReservationModal';
 import { Cart } from './Cart';
-
-// import { Link, useLocation } from 'react-router-dom';
+import { useAppSelector } from '../redux/store/reduxHook';
+import { createStorage } from '../utils/localStorageFunctions';
 
 export const Header: FC = () => {
-  // const location = useLocation();
-  // console.log(location);
-  // const URL = import.meta.env.VITE_BASE_URL;
-  // console.log(URL);
+  const selectedDishes = useAppSelector((state) => state.dishes.list);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      createStorage(selectedDishes);
+    }
+    isMounted.current = true;
+  }, [selectedDishes]);
 
   const [show, setShow] = useState<boolean>(false);
   const handleShow = () => setShow(true);
@@ -26,7 +31,6 @@ export const Header: FC = () => {
     >
       <Container>
         <img
-          // src={`${URL}Starfish.png`}
           src="src/assets/Starfish.png"
           style={{ width: '60px', margin: '0 10px ' }}
         ></img>
@@ -54,7 +58,6 @@ export const Header: FC = () => {
             </Button>
             <Button
               variant="danger"
-              // size="sm"
               href="/menu"
               className="d-flex align-items-center"
             >
