@@ -12,7 +12,7 @@ interface SelectedDishItemProps {
 
 export const SelectedDishItem: FC<SelectedDishItemProps> = ({ dish }) => {
   const dispatch = useAppDispatch();
-  const { id, title, icon, text, price, number } = dish;
+  const { id, title, icon, price, number } = dish;
 
   return (
     <ListGroupItem className="bg-bs-light mb-3">

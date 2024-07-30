@@ -8,14 +8,7 @@ import { Cart } from './Cart';
 import { useAppSelector } from '../redux/store/reduxHook';
 import { createStorage } from '../utils/localStorageFunctions';
 
-// import { Link, useLocation } from 'react-router-dom';
-
 export const Header: FC = () => {
-  // const location = useLocation();
-  // console.log(location);
-  // const URL = import.meta.env.VITE_BASE_URL;
-  // console.log(URL);
-
   const selectedDishes = useAppSelector((state) => state.dishes.list);
   const isMounted = useRef(false);
 
@@ -38,7 +31,6 @@ export const Header: FC = () => {
     >
       <Container>
         <img
-          // src={`${URL}Starfish.png`}
           src="src/assets/Starfish.png"
           style={{ width: '60px', margin: '0 10px ' }}
         ></img>
@@ -66,7 +58,6 @@ export const Header: FC = () => {
             </Button>
             <Button
               variant="danger"
-              // size="sm"
               href="/menu"
               className="d-flex align-items-center"
             >

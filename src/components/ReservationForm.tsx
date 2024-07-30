@@ -6,17 +6,16 @@ import {
   emailValidation,
   nameValidation,
   phoneValidation,
-} from '../validation.ts';
+} from '../utils/validateFormValues.ts';
 
 import { IReservationFormFields } from '../types/types';
 
 interface ReservationFormProps {
-  handleClose: () => void | undefined;
   setShowAlert: React.Dispatch<React.SetStateAction<boolean>>;
+  reservationData: IReservationFormFields;
   setReservationData: React.Dispatch<
     React.SetStateAction<IReservationFormFields>
   >;
-  reservationData: IReservationFormFields;
 }
 
 export const ReservationForm: FC<ReservationFormProps> = ({
@@ -30,7 +29,6 @@ export const ReservationForm: FC<ReservationFormProps> = ({
     register,
     formState: { errors },
     handleSubmit,
-    // reset,
   } = useForm<IReservationFormFields>({
     mode: 'onChange',
     defaultValues: reservationData,
@@ -41,7 +39,6 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   const onSubmit: SubmitHandler<IReservationFormFields> = (data) => {
     setReservationData(data);
     setShowAlert(true);
-    // reset();
   };
 
   return (

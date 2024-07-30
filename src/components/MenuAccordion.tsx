@@ -11,9 +11,7 @@ interface AccordionProps {
 
 export const MenuAccordion: FC<AccordionProps> = ({ dishes }) => {
   const dispatch = useAppDispatch();
-  // const orderDish = () => {
-  //   localStorage.setItem("dish", JSON.stringify(dish: IDish))
-  // };
+
   return (
     <Accordion defaultActiveKey={dishes[0].id}>
       <List

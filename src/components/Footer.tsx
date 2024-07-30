@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Button } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
 
 import Facebook from '../assets/icons/facebook.svg';
 import Instagram from '../assets/icons/instagram.svg';
@@ -8,9 +7,6 @@ import Telegram from '../assets/icons/telegram.svg';
 import Whatsapp from '../assets/icons/whatsapp.svg';
 
 export const Footer: FC = () => {
-  // const location = useLocation().pathname;
-
-  // return location === '/' ? (
   return (
     <div className="row d-flex bg-secondary text-white">
       <div id="hours" className="col-lg-4 col-md-6 text-center">
@@ -93,7 +89,4 @@ export const Footer: FC = () => {
       </div>
     </div>
   );
-  // : (
-  //   ''
-  // );
 };
