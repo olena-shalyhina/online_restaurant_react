@@ -6,9 +6,9 @@ import { ContactsPage } from '../pages/ContactsPage';
 function RouteComponent() {
   return (
     <Routes>
-      <Route index path="/" element={<MainPage />} />
-      <Route path="/menu" element={<MenuPage />} />
-      <Route path="/contacts" element={<ContactsPage />} />
+      <Route index element={<MainPage />} />
+      <Route path={`menu`} element={<MenuPage />} />
+      <Route path={`contacts`} element={<ContactsPage />} />
     </Routes>
   );
 }

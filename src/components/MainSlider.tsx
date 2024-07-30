@@ -1,13 +1,16 @@
 import { FC } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import '../styles/mainPage.scss';
+import meatImage from '../assets/1630224720_1.jpg';
+import fishImage from '../assets/1630219545_12.jpg';
+import sushiImage from '../assets/1630256733_17.jpg';
 
 export const MainSlider: FC = () => {
   return (
     <Carousel className="menu-container mb-5 px-0">
       <Carousel.Item interval={5000} className="carusel-item">
         <img
-          src="..//..//src/assets/1630224720_1.jpg"
+          src={meatImage}
           className="carusel-img d-block m-auto w-100"
           alt="Meat dishes"
         />
@@ -17,7 +20,7 @@ export const MainSlider: FC = () => {
       </Carousel.Item>
       <Carousel.Item interval={2500} className="carusel-item">
         <img
-          src="..//..//src/assets/1630219545_12.jpg"
+          src={fishImage}
           className=" carusel-img d-block w-100  m-auto "
           alt="Fish dishes"
         />
@@ -27,7 +30,7 @@ export const MainSlider: FC = () => {
       </Carousel.Item>
       <Carousel.Item className="carusel-item">
         <img
-          src="..//..//src/assets/1630256733_17.jpg"
+          src={sushiImage}
           className="carusel-img d-block m-auto w-100 "
           alt="Sushi and rolls"
         />

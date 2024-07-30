@@ -3,13 +3,13 @@ import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react(), svgr()],
+//   base: '/online_restaurant_react',
+// });
 export default defineConfig(({ command }) => {
-  const config = {
+  return {
     plugins: [react(), svgr()],
-    base: '/',
+    base: command === 'serve' ? '/' : '/online_restaurant_react/',
   };
-  if (command !== 'serve') {
-    config.base = '/online_restaurant_react/';
-  }
-  return config;
 });

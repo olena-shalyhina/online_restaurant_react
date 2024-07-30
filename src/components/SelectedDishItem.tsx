@@ -19,7 +19,7 @@ export const SelectedDishItem: FC<SelectedDishItemProps> = ({ dish }) => {
       <div className="dish_item d-flex justify-content-between align-items-center gap-4">
         <img
           src={icon}
-          alt=""
+          alt="Dish image"
           style={{ width: 'clamp(50px, 18vw, 150px)' }}
           className="rounded-circle"
         />

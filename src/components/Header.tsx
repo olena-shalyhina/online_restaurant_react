@@ -7,8 +7,10 @@ import { ReservationModal } from './ReservationModal';
 import { Cart } from './Cart';
 import { useAppSelector } from '../redux/store/reduxHook';
 import { createStorage } from '../utils/localStorageFunctions';
+import logoImage from '../assets/Starfish.png';
 
 export const Header: FC = () => {
+  const url = import.meta.env.BASE_URL;
   const selectedDishes = useAppSelector((state) => state.dishes.list);
   const isMounted = useRef(false);
 
@@ -30,12 +32,9 @@ export const Header: FC = () => {
       data-bs-theme="dark"
     >
       <Container>
-        <img
-          src="src/assets/Starfish.png"
-          style={{ width: '60px', margin: '0 10px ' }}
-        ></img>
+        <img src={logoImage} style={{ width: '60px', margin: '0 10px ' }}></img>
 
-        <Navbar.Brand className="text-danger fw-bold fs-1" href="/">
+        <Navbar.Brand className="text-danger fw-bold fs-1" href={`${url}`}>
           STARFISH
         </Navbar.Brand>
 
@@ -49,8 +48,8 @@ export const Header: FC = () => {
             className="me-auto  text-light fs-5"
             style={{ maxHeight: '200px' }}
           >
-            <Nav.Link href="/menu">MENU</Nav.Link>
-            <Nav.Link href="/contacts">CONTACTS</Nav.Link>
+            <Nav.Link href={`${url}menu`}>MENU</Nav.Link>
+            <Nav.Link href={`${url}contacts`}>CONTACTS</Nav.Link>
           </Nav>
           <div className="d-flex gap-3 justify-content-start">
             <Button variant="danger" onClick={handleShow}>
@@ -58,7 +57,7 @@ export const Header: FC = () => {
             </Button>
             <Button
               variant="danger"
-              href="/menu"
+              href={`${url}menu`}
               className="d-flex align-items-center"
             >
               ORDER TO HOME
