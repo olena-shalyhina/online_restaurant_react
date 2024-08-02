@@ -85,12 +85,12 @@ export const ReservationForm: FC<ReservationFormProps> = ({
         <Form.Control
           className="form-control-sm"
           type="tel"
-          placeholder="+372 00000000"
+          placeholder="+37200000000"
           {...register('phone', {
             required: 'Phone is required field',
             pattern: {
               value: phoneValidation,
-              message: 'Please enter phone namber (+372 00000000)',
+              message: 'Please enter phone namber (+37200000000)',
             },
           })}
         />

@@ -78,7 +78,7 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                     time: '',
                     textarea: '',
                   });
-                }, 3000);
+                }, 1000);
               }}
               variant="danger"
               className="w-25"
