@@ -1,4 +1,4 @@
-# STARFISH RESTOURANT
+# STARFISH RESTAURANT
 
 ![Static Badge](https://img.shields.io/badge/Vite-%23F8EC25?logo=vite)
 ![Static Badge](https://img.shields.io/badge/React-%2359328B?logo=react)
