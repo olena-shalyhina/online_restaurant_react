@@ -13,9 +13,11 @@
 
 ---
 
-## Bright single-page application with beautiful images and animations
+## It's a colorful, responsive single-page application with beautiful images and animations
 
-### _Deployed using Vite and built using Type Script and modern libraries:React, Redux Toolkit, React Router, React Hook form, React Bootstrap, SASS_.
+### Deployed using Vite and built using Type Script and modern libraries:
+
+### `React, Redux Toolkit, React Router, React Hook Form, React Bootstrap, SASS.`
 
 ---
 
