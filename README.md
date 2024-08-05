@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# STARFISH RESTOURANT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Static Badge](https://img.shields.io/badge/Vite-%23F8EC25?logo=vite)
+![Static Badge](https://img.shields.io/badge/React-%2359328B?logo=react)
+![Static Badge](https://img.shields.io/badge/TypeScript-%23417FD8?logo=tsnode&logoColor=%23fff)
+![Static Badge](https://img.shields.io/badge/Redux-%235D19B3?logo=redux)
+![Static Badge](https://img.shields.io/badge/React%20Router-%23CA4245?logo=reactrouter&logoColor=%23fff)
 
-Currently, two official plugins are available:
+![Static Badge](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990?logo=reacthookform&logoColor=%23fff)
+![Static Badge](https://img.shields.io/badge/React%20Bootstrap-%2341E0FD?logo=reactbootstrap&logoColor=%23fff)
+![Static Badge](https://img.shields.io/badge/HTML-%23E34F26?logo=html5&logoColor=%23fff)
+![Static Badge](https://img.shields.io/badge/SASS-%23CC6699?logo=sass&logoColor=%23fff)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Bright single-page application with beautiful images and animations
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### _Deployed using Vite and built using Type Script and modern libraries:React, Redux Toolkit, React Router, React Hook form, React Bootstrap, SASS_.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### The functionality of the application allows
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- navigate the site pages
+
+- book a place and time of visit
+
+- make an order online
+
+- manage shopping cart
