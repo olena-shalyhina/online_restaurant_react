@@ -18,13 +18,22 @@
 }
 
 .accordion-body p.text-description {
-  height: 50px;
-  padding: 10px;
-  color: #cde3e8;
+  color: #e8d8dc;
+  min-height: 3rem;
 }
 
-.accordion-body button:hover {
-  box-shadow: 0 0 0 0.25rem rgba(215, 207, 208, 0.5);
+.accordion-button:not(.collapsed) {
+  background-color: #f7e5e9 !important;
+  box-shadow: 0 0 0 0.05rem rgba(205, 175, 183, 0.45) !important;
+}
+
+.accordion-button:focus {
+  border-color: #e8d8dc !important;
+  box-shadow: 0 0 0 0.05rem rgba(205, 175, 183, 0.45) !important;
+}
+
+.accordion-item {
+  border: 1px solid #f1dce1 !important;
 }
 
 .menu-section-title {
@@ -44,4 +53,10 @@
     width: 100%;
     // transform: rotate(0deg) scale(1);
   }
+}
+
+.form-control:focus {
+  border-color: #cfe6d6 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(205, 175, 183, 0.45) !important;
 }

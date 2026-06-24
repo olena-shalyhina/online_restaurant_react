@@ -42,13 +42,13 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   };
 
   return (
-    <Form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
-      <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
-        <Form.Label className="text-warning">E-mail</Form.Label>
+    <Form id='hook-form' onSubmit={handleSubmit(onSubmit)}>
+      <Form.Group className='mb-2' controlId='exampleForm.ControlInput1'>
+        <Form.Label className='text-light'>E-mail</Form.Label>
         <Form.Control
-          className="form-control-sm"
-          type="email"
-          placeholder="name@example.com"
+          className='form-control-sm'
+          type='email'
+          placeholder='name@example.com'
           // autoFocus
           {...register('email', {
             required: 'Email is required field',
@@ -59,15 +59,15 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           })}
         />
         {errors.email && (
-          <Form.Text className="text-danger">{errors.email.message}</Form.Text>
+          <Form.Text className='text-danger'>{errors.email.message}</Form.Text>
         )}
       </Form.Group>
-      <Form.Group className="mb-2" controlId="exampleForm.ControlInput2">
-        <Form.Label className="text-warning">Name</Form.Label>
+      <Form.Group className='mb-2' controlId='exampleForm.ControlInput2'>
+        <Form.Label className='text-light'>Name</Form.Label>
         <Form.Control
-          className="form-control-sm"
-          type="text"
-          placeholder="Name"
+          className='form-control-sm'
+          type='text'
+          placeholder='Name'
           {...register('name', {
             required: 'Name is required field',
             pattern: {
@@ -77,15 +77,15 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           })}
         />
         {errors.name && (
-          <Form.Text className="text-danger">{errors.name.message}</Form.Text>
+          <Form.Text className='text-danger'>{errors.name.message}</Form.Text>
         )}
       </Form.Group>
-      <Form.Group className="mb-2" controlId="exampleForm.ControlInput3">
-        <Form.Label className="text-warning">Phone</Form.Label>
+      <Form.Group className='mb-2' controlId='exampleForm.ControlInput3'>
+        <Form.Label className='text-light'>Phone</Form.Label>
         <Form.Control
-          className="form-control-sm"
-          type="tel"
-          placeholder="+37200000000"
+          className='form-control-sm'
+          type='tel'
+          placeholder='+37200000000'
           {...register('phone', {
             required: 'Phone is required field',
             pattern: {
@@ -95,15 +95,15 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           })}
         />
         {errors.phone && (
-          <Form.Text className="text-danger">{errors.phone.message}</Form.Text>
+          <Form.Text className='text-danger'>{errors.phone.message}</Form.Text>
         )}
       </Form.Group>
-      <Form.Group className="mb-2" controlId="exampleForm.ControlInput4">
-        <Form.Label className="text-warning">People</Form.Label>
+      <Form.Group className='mb-2' controlId='exampleForm.ControlInput4'>
+        <Form.Label className='text-light'>People</Form.Label>
         <Form.Control
-          className="form-control-sm"
-          type="number"
-          placeholder="2"
+          className='form-control-sm'
+          type='number'
+          placeholder='2'
           min={1}
           max={20}
           {...register('people', {
@@ -111,37 +111,37 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           })}
         />
         {errors.people && (
-          <Form.Text className="text-danger">{errors.people.message}</Form.Text>
+          <Form.Text className='text-danger'>{errors.people.message}</Form.Text>
         )}
       </Form.Group>
-      <Form.Group className="mb-2" controlId="exampleForm.ControlInput5">
-        <Form.Label className="text-warning">Time</Form.Label>
-        <div className="mb-2 d-flex justify-content-between gap-3">
-          <div className="d-flex flex-column align-items-stretch w-100">
+      <Form.Group className='mb-2' controlId='exampleForm.ControlInput5'>
+        <Form.Label className='text-light'>Time</Form.Label>
+        <div className='mb-2 d-flex justify-content-between gap-3'>
+          <div className='d-flex flex-column align-items-stretch w-100'>
             <Form.Control
-              className="form-control-sm"
-              type="date"
+              className='form-control-sm'
+              type='date'
               {...register('date', {
                 required: 'Select date',
               })}
             />
             {errors.date && (
-              <Form.Text className="text-danger">
+              <Form.Text className='text-danger'>
                 {errors.date.message}
               </Form.Text>
             )}
           </div>
 
-          <div className="d-flex flex-column align-items-stretch w-100">
+          <div className='d-flex flex-column align-items-stretch w-100'>
             <Form.Control
-              className="form-control-sm"
-              type="time"
+              className='form-control-sm'
+              type='time'
               {...register('time', {
                 required: 'Select time',
               })}
             />
             {errors.time && (
-              <Form.Text className="text-danger">
+              <Form.Text className='text-danger'>
                 {errors.time.message}
               </Form.Text>
             )}
@@ -149,14 +149,14 @@ export const ReservationForm: FC<ReservationFormProps> = ({
         </div>
       </Form.Group>
 
-      <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
-        <Form.Label className="text-warning">Additional information</Form.Label>
-        <Form.Control as="textarea" rows={3} />
+      <Form.Group className='mb-2' controlId='exampleForm.ControlTextarea1'>
+        <Form.Label className='text-light'>Additional information</Form.Label>
+        <Form.Control as='textarea' rows={3} />
       </Form.Group>
       <Button
-        className="text-dark mt-3 mb-1 w-100"
-        variant="danger"
-        type="submit"
+        className='text-light mt-3 mb-1 w-100'
+        variant='danger'
+        type='submit'
       >
         RESERVE
       </Button>

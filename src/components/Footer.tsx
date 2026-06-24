@@ -8,81 +8,90 @@ import Whatsapp from '../assets/icons/whatsapp.svg';
 
 export const Footer: FC = () => {
   return (
-    <div className="row d-flex bg-secondary text-white">
-      <div id="hours" className="col-lg-4 col-md-6 text-center">
-        <p className="text-danger p-3 fw-bold  fs-5">HOURS</p>
-        <p>Sun-Thurs: 11:15am - 10:00pm</p>
-        <p>Fri: 11:15am - 2:30pm</p>
+    <div className='row d-flex justify-content-center gap-5 m-1 bg-dark text-white'>
+      <div
+        id='hours'
+        className='col-lg-3 col-md-6 text-center border rounded-5 border-2 border-danger p-3'
+      >
+        <p className='text-danger p-3 fs-5'>HOURS</p>
+        <p>Sun-Thurs: 11:00 am - 10:00 pm</p>
+        <p>Fri: 11:00 am - 2:00 pm</p>
         <p>Saturday Closed</p>
-        <p className="d-sm-none"></p>
+        <p className='d-sm-none'></p>
       </div>
-      <div id="address" className="col-lg-4 col-md-6 text-center">
-        <p className="text-danger py-3 fw-bold fs-5">ADDRESS</p>
+      <div
+        id='address'
+        className='col-lg-3 col-md-6 text-center w-sm-100  border rounded-5 border-2 border-danger p-3'
+      >
+        <p className='text-danger py-3 fs-5'>ADDRESS</p>
         10152 Tallinn Raua tn 628
-        <p className="text-danger">* 24/7 free food delivery</p>
-        <Button variant="danger" href="tel:+37233344555">
-          <i className="bi bi-phone"></i> (+372) 333-44-555
+        <p className='text-warning fs-5 pt-3'>* 24/7 free food delivery</p>
+        <Button variant='danger' href='tel:+37233344555'>
+          <i className='bi bi-phone'></i> (+372) 333-44-555
         </Button>
       </div>
 
-      <div id="testimonials" className="col-lg-4 col-md-12">
-        <div className="text-center m-3">
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
+      <div
+        id='testimonials'
+        className='col-lg-3 col-md-6 border rounded-5 border-2 border-danger p-5 p-lg-3'
+      >
+        <div className='text-center'>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
           <p>
             "The best restaurant I've been to! And that's saying a lot, since
             I've been to many!"
           </p>
         </div>
-        <div className="text-center m-3">
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-fill text-danger p-1"></i>
-          <i className="bi bi-star-half text-danger p-1"></i>
+        <div className='text-center'>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-fill text-danger p-1'></i>
+          <i className='bi bi-star-half text-danger p-1'></i>
           <p>
             "Amazing food! Great service! Couldn't ask for more! I'll be back
             again and again!"
           </p>
         </div>
       </div>
-      <div className="social col-sm-12 mt-5 d-flex  justify-content-center gap-3">
-        <Button variant="danger" size="sm">
-          <a className="social__link" href="#">
+      <div className='social col-sm-12 mt-5 d-flex  justify-content-center gap-3'>
+        <Button variant='danger' size='sm'>
+          <a className='social__link' href='#'>
             <img
-              className="social__img"
+              className='social__img'
               src={Instagram}
-              alt="instagram icon"
+              alt='instagram icon'
             ></img>
           </a>
         </Button>
-        <Button variant="danger" size="sm">
-          <a className="social__link" href="#">
+        <Button variant='danger' size='sm'>
+          <a className='social__link' href='#'>
             <img
-              className="social__img"
+              className='social__img'
               src={Telegram}
-              alt="telegram icon"
+              alt='telegram icon'
             ></img>
           </a>
         </Button>
-        <Button variant="danger" size="sm">
-          <a className="social__link" href="#">
+        <Button variant='danger' size='sm'>
+          <a className='social__link' href='#'>
             <img
-              className="social__img"
+              className='social__img'
               src={Whatsapp}
-              alt="whatsapp icon"
+              alt='whatsapp icon'
             ></img>
           </a>
         </Button>
-        <Button variant="danger" size="sm">
-          <a className="social__link" href="#">
+        <Button variant='danger' size='sm'>
+          <a className='social__link' href='#'>
             <img
-              className="social__img"
+              className='social__img'
               src={Facebook}
-              alt="facebook icon"
+              alt='facebook icon'
             ></img>
           </a>
         </Button>

@@ -26,39 +26,39 @@ export const Header: FC = () => {
 
   return (
     <Navbar
-      fixed="top"
-      expand="lg"
-      className="bg-secondary border-2 border-bottom border-danger"
-      data-bs-theme="dark"
+      fixed='top'
+      expand='lg'
+      className='bg-dark border-2 border-bottom border-danger'
+      data-bs-theme='dark'
     >
       <Container>
         <img src={logoImage} style={{ width: '60px', margin: '0 10px ' }}></img>
 
-        <Navbar.Brand className="text-danger fw-bold fs-1" href={`${url}`}>
-          STARFISH
+        <Navbar.Brand className='text-danger fw-bold fs-1' href={`${url}`}>
+          Coral & Flame
         </Navbar.Brand>
 
         <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          className="text-danger"
+          aria-controls='responsive-navbar-nav'
+          className='text-danger'
         />
         <Cart />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav
-            className="me-auto  text-light fs-5"
+            className='me-auto  text-light fs-5'
             style={{ maxHeight: '200px' }}
           >
             <Nav.Link href={`${url}menu`}>MENU</Nav.Link>
             <Nav.Link href={`${url}contacts`}>CONTACTS</Nav.Link>
           </Nav>
-          <div className="d-flex gap-3 justify-content-start">
-            <Button variant="danger" onClick={handleShow}>
+          <div className='d-flex gap-3 justify-content-start'>
+            <Button variant='danger' onClick={handleShow}>
               BOOK A TABLE
             </Button>
             <Button
-              variant="danger"
+              variant='danger'
               href={`${url}menu`}
-              className="d-flex align-items-center"
+              className='d-flex align-items-center'
             >
               ORDER TO HOME
             </Button>

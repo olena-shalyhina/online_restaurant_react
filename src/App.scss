@@ -3,14 +3,12 @@
 #root {
   margin: 0 auto;
   box-sizing: border-box;
-  // width: 1240px;
   overflow: hidden;
   font-family: $font-segoe;
   font-size: $font-size-main;
 }
 .main_container {
-  background-color: $bg-secondary;
-
+  background-color: $bg-dark;
   min-height: calc(100vh - 50px);
   max-width: 1240px;
   min-width: 320px;

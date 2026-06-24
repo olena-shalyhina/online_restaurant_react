@@ -30,10 +30,10 @@ export const ReservationModal: FC<ReservationModalProps> = ({
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton className="bg-danger">
-          <Modal.Title>RESERV A TABLE</Modal.Title>
+        <Modal.Header closeButton className='bg-danger border-bottom-0'>
+          <Modal.Title className='text-light'>RESERVE A TABLE</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-secondary">
+        <Modal.Body className='bg-dark border border-danger border-1 rounded-bottom-3'>
           {showAlert ? (
             <ConfirmReservationAlert
               showAlert={showAlert}
@@ -51,7 +51,6 @@ export const ReservationModal: FC<ReservationModalProps> = ({
             />
           )}
         </Modal.Body>
-        <Modal.Footer className="bg-secondary"></Modal.Footer>
       </Modal>
     </>
   );

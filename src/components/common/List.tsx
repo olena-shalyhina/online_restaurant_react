@@ -1,6 +1,6 @@
 interface ListProps<T> {
-  items: T[]; //T - это сам item - например IUser[]
-  renderItem: (item: T) => React.ReactNode; // компонент, который мы хотим отрисовать
+  items: T[];
+  renderItem: (item: T) => React.ReactNode;
 }
 
 export default function List<T>(props: ListProps<T>) {

@@ -7,35 +7,35 @@ import sushiImage from '../assets/1630256733_17.jpg';
 
 export const MainSlider: FC = () => {
   return (
-    <Carousel className="menu-container mb-5 px-0">
-      <Carousel.Item interval={5000} className="carusel-item">
+    <Carousel className='menu-container mb-5 px-0'>
+      <Carousel.Item interval={5000} className='carusel-item'>
         <img
           src={meatImage}
-          className="carusel-img d-block m-auto w-100"
-          alt="Meat dishes"
+          className='carusel-img d-block m-auto w-100'
+          alt='Meat dishes'
         />
         <Carousel.Caption>
-          <h3 className="bg-dark opacity-75  w-100">MEAT DISHES</h3>
+          <h3 className='bg-dark opacity-75  w-100'>MEAT DISHES</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2500} className="carusel-item">
+      <Carousel.Item interval={2500} className='carusel-item'>
         <img
           src={fishImage}
-          className=" carusel-img d-block w-100  m-auto "
-          alt="Fish dishes"
+          className=' carusel-img d-block w-100  m-auto '
+          alt='Fish dishes'
         />
         <Carousel.Caption>
-          <h3 className="bg-dark opacity-75 w-100">FISH DISHES</h3>
+          <h3 className='bg-dark opacity-75 w-100'>FISH DISHES</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item className="carusel-item">
+      <Carousel.Item className='carusel-item'>
         <img
           src={sushiImage}
-          className="carusel-img d-block m-auto w-100 "
-          alt="Sushi and rolls"
+          className='carusel-img d-block m-auto w-100 '
+          alt='Sushi and rolls'
         />
         <Carousel.Caption>
-          <h3 className="bg-dark opacity-75 w-100">SUSHI AND ROLLS</h3>
+          <h3 className='bg-dark opacity-75 w-100'>SUSHI AND ROLLS</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

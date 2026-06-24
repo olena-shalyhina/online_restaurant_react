@@ -15,33 +15,35 @@ export const SelectedDishItem: FC<SelectedDishItemProps> = ({ dish }) => {
   const { id, title, icon, price, number } = dish;
 
   return (
-    <ListGroupItem className="bg-bs-light mb-3">
-      <div className="dish_item d-flex justify-content-between align-items-center gap-4">
+    <ListGroupItem className='bg-bs-light'>
+      <div className='dish_item d-flex justify-content-between align-items-center gap-4'>
         <img
           src={icon}
-          alt="Dish image"
+          alt='Dish image'
           style={{ width: 'clamp(50px, 18vw, 150px)' }}
-          className="rounded-circle"
+          className='rounded-circle'
         />
-        <div className="text-center d-flex flex-column justify-content-between w-100">
-          <p className="text-start">{title}</p>
-          <div className="d-flex justify-content-between align-items-center gap-5">
-            <div className="text-success">&#8364; {price.toFixed(2)}</div>
-            <div className="text-center d-flex gap-1">
+        <div className='text-center d-flex flex-column justify-content-between w-100'>
+          <p className='text-start'>{title}</p>
+          <div className='d-flex justify-content-between align-items-center gap-5'>
+            <div className='text-success'>&#8364; {price.toFixed(2)}</div>
+            <div className='text-center d-flex gap-1'>
               <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => dispatch(addDish(dish))}
-              >
-                +
-              </Button>
-              <div className="text-center p-1 fw-bold">{number}</div>
-              <Button
-                variant="danger"
-                size="sm"
+                variant='secondary'
+                size='sm'
                 onClick={() => dispatch(removeDish(id))}
               >
-                -
+                <i className='bi bi-dash-lg'></i>
+              </Button>
+
+              <div className='text-center p-1 fw-bold'>{number}</div>
+
+              <Button
+                variant='secondary'
+                size='sm'
+                onClick={() => dispatch(addDish(dish))}
+              >
+                <i className='bi bi-plus-lg'></i>
               </Button>
             </div>
           </div>

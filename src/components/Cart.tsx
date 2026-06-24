@@ -29,35 +29,35 @@ export const Cart: FC = () => {
 
   return (
     <>
-      <div className="cart_wrapper mx-2">
-        <Button variant="danger" onClick={handleShow} className="ml-5">
-          <i className="bi bi-cart-check-fill fs-6"></i>
+      <div className='cart_wrapper mx-2'>
+        <Button variant='danger' onClick={handleShow} className='ml-5'>
+          <i className='bi bi-cart-check-fill fs-6'></i>
         </Button>
         {selectedDishes.length > 0 && (
-          <div className="cart_orders_count fw-bold text-success bg-warning">
+          <div className='cart_orders_count fw-bold text-success bg-light '>
             {sumSelectedDishesNumber}
           </div>
         )}
 
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header className="bg-secondary" closeButton>
-            <Modal.Title className="text-light">YOUR ORDER</Modal.Title>
+          <Modal.Header
+            className='bg-danger border border-danger border-1 '
+            closeButton
+          >
+            <Modal.Title className='text-light'>YOUR ORDER</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className='bg-dark text-light border border-danger border-bottom-0 border-1 '>
             <SelectedDishesList />
           </Modal.Body>
-          <Modal.Footer className="d-flex justify-content-between">
+          <Modal.Footer className='d-flex justify-content-between bg-dark border border-danger border-1'>
             {selectedDishes.length > 0 && (
-              <Button variant="danger" onClick={() => dispatch(clearList())}>
+              <Button variant='secondary' onClick={() => dispatch(clearList())}>
                 Clear
               </Button>
             )}
-            <div className="d-flex gap-2">
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
+            <div className='d-flex gap-2'>
               {selectedDishes.length > 0 && (
-                <Button variant="success" onClick={handleClick}>
+                <Button variant='danger' onClick={handleClick}>
                   Go to pay
                 </Button>
               )}
@@ -65,8 +65,8 @@ export const Cart: FC = () => {
           </Modal.Footer>
           <Alert
             show={showAllert}
-            variant="info"
-            className="info_alert d-flex justify-content-between py-1"
+            variant='info'
+            className='info_alert d-flex justify-content-between py-1'
           >
             <span>
               The payment page is under development and is not yet available.

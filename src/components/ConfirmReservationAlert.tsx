@@ -26,11 +26,17 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
   const [reserved, setReserved] = useState<boolean>(false);
 
   return (
-    <Alert show={showAlert} variant="danger" className="text-center mb-0">
+    <Alert
+      show={showAlert}
+      variant='text-light'
+      className='bg-dark text-center mb-0 text-light'
+    >
       {reserved ? (
         <>
-          <Alert.Heading>Reservation completed successfully!</Alert.Heading>
-          <p>
+          <Alert.Heading className='pb-3 text-success fs-6'>
+            Reservation completed successfully!
+          </Alert.Heading>
+          <p className='text-light'>
             <span>{name}, we will be glad to see you</span>
             <br />
             <span>
@@ -40,8 +46,10 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
         </>
       ) : (
         <>
-          <Alert.Heading>Thank you! Check and confirm.</Alert.Heading>
-          <p>
+          <Alert.Heading className='pb-3 text-warning fs-6'>
+            Thank you! Check and confirm.
+          </Alert.Heading>
+          <p className='pb-3'>
             <b>{name}</b>, you have a table reserved for:
             <br /> {date} at {time}.
             <br />
@@ -50,15 +58,15 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
             Your phone number: {phone}
           </p>
           <hr />
-          <div className="d-flex justify-content-between">
+          <div className='d-flex justify-content-between'>
             <Button
               onClick={() => {
                 setShowAlert(false);
                 handleClose();
                 setShowModal(true);
               }}
-              variant="secondary"
-              className="w-25"
+              variant='secondary'
+              className='w-25'
             >
               Сome back
             </Button>
@@ -78,10 +86,10 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                     time: '',
                     textarea: '',
                   });
-                }, 1000);
+                }, 3000);
               }}
-              variant="danger"
-              className="w-25"
+              variant='danger'
+              className='w-25'
             >
               Confirm
             </Button>
