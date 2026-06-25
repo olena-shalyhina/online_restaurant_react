@@ -4,10 +4,10 @@ import { SocialBar } from './common/SocialBar';
 
 export const Footer: FC = () => {
   return (
-    <div className='row d-flex align-items-stretch justify-content-center gap-3 gap-lg-5 m-1 bg-dark text-white '>
+    <div className='row d-flex align-items-stretch justify-content-around gap-3  gap-lg-5 m-1 bg-dark text-white '>
       <div
         id='hours'
-        className='d-flex flex-column col-lg-3 col-md-6 text-center border rounded-5 border-2 border-danger p-3 gap-2 pb-4'
+        className='d-flex flex-column col-12 col-sm-5 col-lg-3 text-center border rounded-5 border-2 border-danger p-3 gap-2 pb-4'
       >
         <p className='text-danger fw-bold'>HOURS</p>
         <p className='mb-1'>
@@ -24,7 +24,7 @@ export const Footer: FC = () => {
       </div>
       <div
         id='address'
-        className='col-lg-3 col-md-6 text-center w-sm-100  border rounded-5 border-2 border-danger p-3'
+        className='col-12 col-sm-5 col-lg-3  text-center  border rounded-5 border-2 border-danger p-3'
       >
         <p className='text-danger fw-bold'>ADDRESS</p>
         10152 Tallinn Raua tn 628
@@ -35,7 +35,7 @@ export const Footer: FC = () => {
       </div>
       <div
         id='testimonials'
-        className='col-lg-3 col-md-6 border rounded-5 border-2 border-danger p-3'
+        className=' col-sm-11 col-lg-3 border rounded-5 border-2 border-danger p-3'
       >
         <div className='text-center'>
           <i className='bi bi-star-fill text-danger p-1'></i>
