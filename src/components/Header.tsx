@@ -8,6 +8,7 @@ import { Cart } from './Cart';
 import { useAppSelector } from '../redux/store/reduxHook';
 import { createStorage } from '../utils/localStorageFunctions';
 import logoImage from '../assets/Starfish.png';
+import '../styles/header.scss';
 
 export const Header: FC = () => {
   const url = import.meta.env.BASE_URL;
@@ -32,10 +33,12 @@ export const Header: FC = () => {
       data-bs-theme='dark'
     >
       <Container>
-        <img src={logoImage} style={{ width: '60px', margin: '0 10px ' }}></img>
-
-        <Navbar.Brand className='text-danger fw-bold fs-1' href={`${url}`}>
-          Coral & Flame
+        <Navbar.Brand
+          className='text-danger d-flex align-items-center fw-bold fs-3 fs-sm-1 gap-2'
+          href={`${url}`}
+        >
+          <img src={logoImage} className='logo-img d-none d-sm-block'></img>
+          <span className='pb-lg-2'>Coral & Flame</span>
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -43,22 +46,26 @@ export const Header: FC = () => {
           className='text-danger'
         />
         <Cart />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav
-            className='me-auto  text-light fs-5'
-            style={{ maxHeight: '200px' }}
-          >
+        <Navbar.Collapse id='responsive-navbar-nav gap-2'>
+          <Nav className='me-auto text-light fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
             <Nav.Link href={`${url}menu`}>MENU</Nav.Link>
             <Nav.Link href={`${url}contacts`}>CONTACTS</Nav.Link>
           </Nav>
           <div className='d-flex gap-3 justify-content-start'>
-            <Button variant='danger' onClick={handleShow}>
-              BOOK A TABLE
-            </Button>
             <Button
               variant='danger'
+              size='sm'
+              onClick={handleShow}
+              className='rounded-2 px-3  py-lg-2'
+            >
+              BOOK A TABLE
+            </Button>
+
+            <Button
+              variant='danger'
+              size='sm'
               href={`${url}menu`}
-              className='d-flex align-items-center'
+              className='rounded-2 px-3  py-lg-2'
             >
               ORDER TO HOME
             </Button>

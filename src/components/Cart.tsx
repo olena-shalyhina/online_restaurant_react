@@ -30,8 +30,8 @@ export const Cart: FC = () => {
   return (
     <>
       <div className='cart_wrapper mx-2'>
-        <Button variant='danger' onClick={handleShow} className='ml-5'>
-          <i className='bi bi-cart-check-fill fs-6'></i>
+        <Button variant='danger' onClick={handleShow} className='ms-2 outlined'>
+          <i className='bi bi-cart-check-fill'></i>
         </Button>
         {selectedDishes.length > 0 && (
           <div className='cart_orders_count fw-bold text-success bg-light '>
@@ -62,21 +62,21 @@ export const Cart: FC = () => {
                 </Button>
               )}
             </div>
+            <Alert
+              show={showAllert}
+              variant='danger'
+              className='info_alert d-flex justify-content-between mx-3 gap-2 py-2'
+            >
+              <span>
+                The payment page is under development and is not yet available.
+              </span>
+              <CloseButton
+                onClick={() => {
+                  setShowAlert(false);
+                }}
+              />
+            </Alert>
           </Modal.Footer>
-          <Alert
-            show={showAllert}
-            variant='info'
-            className='info_alert d-flex justify-content-between py-1'
-          >
-            <span>
-              The payment page is under development and is not yet available.
-            </span>
-            <CloseButton
-              onClick={() => {
-                setShowAlert(false);
-              }}
-            />
-          </Alert>
         </Modal>
       </div>
     </>

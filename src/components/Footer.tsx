@@ -1,39 +1,41 @@
 import { FC } from 'react';
 import { Button } from 'react-bootstrap';
-
-import Facebook from '../assets/icons/facebook.svg';
-import Instagram from '../assets/icons/instagram.svg';
-import Telegram from '../assets/icons/telegram.svg';
-import Whatsapp from '../assets/icons/whatsapp.svg';
+import { SocialBar } from './common/SocialBar';
 
 export const Footer: FC = () => {
   return (
-    <div className='row d-flex justify-content-center gap-5 m-1 bg-dark text-white'>
+    <div className='row d-flex align-items-stretch justify-content-center gap-3 gap-lg-5 m-1 bg-dark text-white '>
       <div
         id='hours'
-        className='col-lg-3 col-md-6 text-center border rounded-5 border-2 border-danger p-3'
+        className='d-flex flex-column col-lg-3 col-md-6 text-center border rounded-5 border-2 border-danger p-3 gap-2 pb-4'
       >
-        <p className='text-danger p-3 fs-5'>HOURS</p>
-        <p>Sun-Thurs: 11:00 am - 10:00 pm</p>
-        <p>Fri: 11:00 am - 2:00 pm</p>
-        <p>Saturday Closed</p>
+        <p className='text-danger fw-bold'>HOURS</p>
+        <p className='mb-1'>
+          <span className='text-danger fw-semibold'>Sun–Thu:</span> 11:00 –
+          22:00
+        </p>
+        <p className='mb-1'>
+          <span className='text-danger fw-semibold'>Fri:</span> 11:00 – 14:00
+        </p>
+        <p className='mb-1'>
+          <span className='text-danger fw-semibold'>Saturday:</span> Closed
+        </p>
         <p className='d-sm-none'></p>
       </div>
       <div
         id='address'
         className='col-lg-3 col-md-6 text-center w-sm-100  border rounded-5 border-2 border-danger p-3'
       >
-        <p className='text-danger py-3 fs-5'>ADDRESS</p>
+        <p className='text-danger fw-bold'>ADDRESS</p>
         10152 Tallinn Raua tn 628
         <p className='text-warning fs-5 pt-3'>* 24/7 free food delivery</p>
-        <Button variant='danger' href='tel:+37233344555'>
-          <i className='bi bi-phone'></i> (+372) 333-44-555
+        <Button variant='danger' className='p-2 px-3' href='tel:+37233344555'>
+          <i className='bi bi-phone pe-2'></i> (+372) 333-44-555
         </Button>
       </div>
-
       <div
         id='testimonials'
-        className='col-lg-3 col-md-6 border rounded-5 border-2 border-danger p-5 p-lg-3'
+        className='col-lg-3 col-md-6 border rounded-5 border-2 border-danger p-3'
       >
         <div className='text-center'>
           <i className='bi bi-star-fill text-danger p-1'></i>
@@ -58,44 +60,7 @@ export const Footer: FC = () => {
           </p>
         </div>
       </div>
-      <div className='social col-sm-12 mt-5 d-flex  justify-content-center gap-3'>
-        <Button variant='danger' size='sm'>
-          <a className='social__link' href='#'>
-            <img
-              className='social__img'
-              src={Instagram}
-              alt='instagram icon'
-            ></img>
-          </a>
-        </Button>
-        <Button variant='danger' size='sm'>
-          <a className='social__link' href='#'>
-            <img
-              className='social__img'
-              src={Telegram}
-              alt='telegram icon'
-            ></img>
-          </a>
-        </Button>
-        <Button variant='danger' size='sm'>
-          <a className='social__link' href='#'>
-            <img
-              className='social__img'
-              src={Whatsapp}
-              alt='whatsapp icon'
-            ></img>
-          </a>
-        </Button>
-        <Button variant='danger' size='sm'>
-          <a className='social__link' href='#'>
-            <img
-              className='social__img'
-              src={Facebook}
-              alt='facebook icon'
-            ></img>
-          </a>
-        </Button>
-      </div>
+      <SocialBar />
     </div>
   );
 };

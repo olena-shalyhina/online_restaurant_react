@@ -33,10 +33,10 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
     >
       {reserved ? (
         <>
-          <Alert.Heading className='pb-3 text-success fs-6'>
+          <Alert.Heading className='pb-3 text-success fs-5'>
             Reservation completed successfully!
           </Alert.Heading>
-          <p className='text-light'>
+          <p className='text-light fs-6'>
             <span>{name}, we will be glad to see you</span>
             <br />
             <span>
@@ -49,7 +49,7 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
           <Alert.Heading className='pb-3 text-warning fs-6'>
             Thank you! Check and confirm.
           </Alert.Heading>
-          <p className='pb-3'>
+          <p className='py-2 fs-6 pb-3'>
             <b>{name}</b>, you have a table reserved for:
             <br /> {date} at {time}.
             <br />

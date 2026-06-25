@@ -19,7 +19,7 @@ export const SelectedDishesList: FC = () => {
               <SelectedDishItem key={dish.id} dish={dish} />
             ))}
           </ListGroup>
-          <div className='d-flex justify-content-between mx-auto mt-4  w-100'>
+          <div className='d-flex justify-content-between mx-auto mt-4 w-100'>
             <p className='px-3 text-light'>TOTAL</p>
             <p className='px-3 text-warning'>
               {' '}

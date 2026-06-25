@@ -10,7 +10,7 @@ export const MenuPage: FC = () => {
 
   useEffect(() => {
     fetchManu();
-  }, [menu]);
+  }, []);
 
   const fetchManu = async () => {
     const data = await getDishes();
@@ -20,17 +20,17 @@ export const MenuPage: FC = () => {
   const createSection = (menuSection: IDishes) => (
     <div
       key={menu.indexOf(menuSection)}
-      className='menu-section col-lg-4  col-md-6 col-sm-12 mb-1'
+      className='menu-section col-lg-4 col-md-6 col-sm-12'
     >
-      <h3 className='menu-section-title text-uppercase text-light bg-danger text-center my-3 px-3 border border-2 rounded-2 border-danger'>
+      <h5 className='menu-section-title text-uppercase text-light bg-danger text-center mb-3 p-1 border border-2 rounded-2 border-danger'>
         {menuSection.typeDishes}
-      </h3>
+      </h5>
       <MenuAccordion dishes={menuSection.dishes} />
     </div>
   );
 
   return (
-    <div className='row d-flex align-items-start justify-content-center g-3 mb-5'>
+    <div className='row d-flex align-items-start justify-content-center g-3  pt-3 mb-5'>
       <List items={menu} renderItem={createSection} />
     </div>
   );

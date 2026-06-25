@@ -4,6 +4,7 @@ import { IDish } from '../types/types';
 import List from './common/List';
 import { useAppDispatch } from '../redux/store/reduxHook';
 import { addDish } from '../redux/store/selectedDishSlice';
+import { Button } from 'react-bootstrap';
 
 interface AccordionProps {
   dishes: IDish[];
@@ -24,18 +25,18 @@ export const MenuAccordion: FC<AccordionProps> = ({ dishes }) => {
               <div className='wrapper'>
                 <img src={item.icon} alt='Meat dishes'></img>
                 <p className='text-description'>{item.text}</p>
-                <p className='text-warning'>&#8364; {item.price.toFixed(2)}</p>
+                <p className='text-warning fw-bold'>
+                  &#8364; {item.price.toFixed(2)}
+                </p>
               </div>
-              <button
-                className='btn btn-danger btn-sm text-uppercase mt-1'
+              <Button
+                className='btn btn-danger btn-sm text-uppercase mt-1 px-3 rounded-2'
                 onClick={() => {
                   dispatch(addDish(item));
-
-                  console.log(item, '--- карточка, по которой кликнули ---');
                 }}
               >
                 Order
-              </button>
+              </Button>
             </Accordion.Body>
           </Accordion.Item>
         )}
