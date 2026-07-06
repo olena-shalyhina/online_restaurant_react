@@ -20,17 +20,18 @@ export const MenuAccordion: FC<AccordionProps> = ({ dishes }) => {
         renderItem={(item: IDish) => (
           <Accordion.Item eventKey={item.id} key={item.id}>
             <Accordion.Header>{item.title}</Accordion.Header>
-
-            <Accordion.Body className='accordion-body fst-italic text-dark bg-dark text-center'>
-              <div className='wrapper'>
+            <Accordion.Body className='accordion-body text-dark bg-dark text-center'>
+              <div className='img-wrapper'>
                 <img src={item.icon} alt='Meat dishes'></img>
-                <p className='text-description'>{item.text}</p>
-                <p className='text-warning fw-bold'>
+              </div>
+              <div className='wrapper'>
+                <p className='text-description  fst-italic m-3'>{item.text}</p>
+                <p className='text-warning fw-semibold  fs-6 '>
                   &#8364; {item.price.toFixed(2)}
                 </p>
               </div>
               <Button
-                className='btn btn-danger btn-sm text-uppercase mt-1 px-3 rounded-2'
+                className='btn btn-danger btn-sm text-uppercase px-3 rounded-2'
                 onClick={() => {
                   dispatch(addDish(item));
                 }}

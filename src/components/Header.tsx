@@ -29,7 +29,7 @@ export const Header: FC = () => {
     <Navbar
       fixed='top'
       expand='lg'
-      className='bg-dark border-2 border-bottom border-danger'
+      className='bg-dark border-1 border-bottom border-danger'
       data-bs-theme='dark'
     >
       <Container>

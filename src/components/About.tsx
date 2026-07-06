@@ -1,17 +1,14 @@
 import { FC } from 'react';
-import '../styles/mainPage.scss';
 import { Button } from 'react-bootstrap';
 import { SocialBar } from './common/SocialBar';
+import '../styles/mainPage.scss';
 
 export const About: FC = () => {
   return (
     <div id='about-section' className='px-0 mx-0'>
-      <div
-        className='text-animate text-center text-danger d-flex flex-column align-items-cener justify-content-around
-      '
-      >
+      <div className='text-animate text-center text-danger d-flex flex-column align-items-cener justify-content-center gap-5'>
         <SocialBar />
-        <h1 className='px-3 fw-bold bg-light text-danger rounded-3 p-1 mx-3 opacity-75'>
+        <h1 className='px-3 fw-bold bg-dark text-light p-3 w-100 opacity-75'>
           Flame. Sea. Flavor.
         </h1>
         <Button

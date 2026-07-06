@@ -44,7 +44,7 @@ export const Cart: FC = () => {
             className='bg-danger border border-danger border-1 '
             closeButton
           >
-            <Modal.Title className='text-light'>YOUR ORDER</Modal.Title>
+            <Modal.Title>YOUR ORDER</Modal.Title>
           </Modal.Header>
           <Modal.Body className='bg-dark text-light border border-danger border-bottom-0 border-1 '>
             <SelectedDishesList />
