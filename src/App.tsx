@@ -17,7 +17,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (!initialLoading) return <Loader />;
+  if (initialLoading) return <Loader />;
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Container className='main_container bg-dark d-flex flex-column justify-content-between'>

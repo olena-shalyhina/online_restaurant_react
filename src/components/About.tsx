@@ -8,7 +8,7 @@ export const About: FC = () => {
     <div id='about-section' className='mt-md-4'>
       <div className='text-animate text-center text-danger d-flex flex-column align-items-cener justify-content-center gap-5'>
         <SocialBar />
-        <h1 className='px-3 bg-dark text-light p-3 w-100 opacity-75'>
+        <h1 className='px-3 bg-dark text-light w-100 opacity-75'>
           Flame. Sea. Flavor.
         </h1>
         <Button

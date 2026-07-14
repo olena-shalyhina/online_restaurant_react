@@ -51,7 +51,7 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           className='form-control-sm'
           type='email'
           placeholder='name@example.com'
-          // autoFocus
+          autoFocus
           {...register('email', {
             required: 'Email is required field',
             pattern: {
