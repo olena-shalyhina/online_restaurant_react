@@ -33,7 +33,7 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
     >
       {reserved ? (
         <>
-          <Alert.Heading className='pb-3 text-success fs-5'>
+          <Alert.Heading className='pb-3 text-light fs-5'>
             Reservation completed successfully!
           </Alert.Heading>
           <p className='text-light fs-6'>
@@ -86,7 +86,7 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                     time: '',
                     textarea: '',
                   });
-                }, 3000);
+                }, 5000);
               }}
               variant='danger'
               className='w-25'

@@ -8,8 +8,6 @@ export const SelectedDishesList: FC = () => {
   const selectedDishes = useAppSelector((state) => state.dishes.list);
   const totalPrice = useAppSelector((state) => state.dishes.total);
 
-  console.log(totalPrice, '--- totalPrice ---');
-  console.log(selectedDishes, '--- selectedDishes ---');
   return (
     <div>
       {selectedDishes.length ? (

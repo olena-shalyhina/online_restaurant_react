@@ -37,7 +37,7 @@ export const Header: FC = () => {
           className='text-danger d-flex align-items-center fw-bold fs-3 fs-sm-1 gap-2'
           href={`${url}`}
         >
-          <img src={logoImage} className='logo-img d-none d-sm-block'></img>
+          <img src={logoImage} className='logo-img '></img>
           <span className='pb-lg-2'>Coral & Flame</span>
         </Navbar.Brand>
 
@@ -47,7 +47,7 @@ export const Header: FC = () => {
         />
         <Cart />
         <Navbar.Collapse id='responsive-navbar-nav gap-2'>
-          <Nav className='me-auto text-light fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
+          <Nav className='me-auto fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
             <Nav.Link href={`${url}menu`}>MENU</Nav.Link>
             <Nav.Link href={`${url}contacts`}>CONTACTS</Nav.Link>
           </Nav>

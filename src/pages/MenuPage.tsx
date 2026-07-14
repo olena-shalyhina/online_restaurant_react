@@ -22,7 +22,7 @@ export const MenuPage: FC = () => {
       key={menu.indexOf(menuSection)}
       className='menu-section col-lg-4 col-md-6 col-sm-12'
     >
-      <h5 className='menu-section-title text-uppercase bg-danger text-center mb-3 p-1 border border-2 rounded-2 border-danger'>
+      <h5 className='menu-section-title text-uppercase bg-danger text-center mb-3 mt-md-4 p-1 border border-2 rounded-2 border-danger'>
         {menuSection.typeDishes}
       </h5>
       <MenuAccordion dishes={menuSection.dishes} />

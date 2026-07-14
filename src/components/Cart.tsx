@@ -39,12 +39,12 @@ export const Cart: FC = () => {
           </div>
         )}
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} className='mt-5'>
           <Modal.Header
-            className='bg-danger border border-danger border-1 '
+            className='bg-danger border border-danger border-1'
             closeButton
           >
-            <Modal.Title>YOUR ORDER</Modal.Title>
+            <Modal.Title className='fs-6'>YOUR ORDER</Modal.Title>
           </Modal.Header>
           <Modal.Body className='bg-dark text-light border border-danger border-bottom-0 border-1 '>
             <SelectedDishesList />

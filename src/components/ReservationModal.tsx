@@ -29,9 +29,9 @@ export const ReservationModal: FC<ReservationModalProps> = ({
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className='mt-5'>
         <Modal.Header closeButton className='bg-danger border-bottom-0'>
-          <Modal.Title>RESERVE A TABLE</Modal.Title>
+          <Modal.Title className='fs-6'>RESERVE A TABLE</Modal.Title>
         </Modal.Header>
         <Modal.Body className='bg-dark border border-danger border-1 rounded-bottom-3'>
           {showAlert ? (

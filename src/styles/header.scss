@@ -1,6 +1,16 @@
 .logo-img {
   width: 60px;
+  @media (max-width: 600px) {
+    width: 40px;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
 }
 .responsive-navbar-nav {
   border: 1px solid #dc3545 !important;
+}
+.active {
+  color: #dc3545 !important; // danger
+  border-bottom: 2px solid #dc3545;
 }
