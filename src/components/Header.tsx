@@ -9,6 +9,7 @@ import { useAppSelector } from '../redux/store/reduxHook';
 import { createStorage } from '../utils/localStorageFunctions';
 import logoImage from '../assets/Starfish.png';
 import '../styles/header.scss';
+import { NavLink } from 'react-router-dom';
 
 export const Header: FC = () => {
   const url = import.meta.env.BASE_URL;
@@ -48,9 +49,25 @@ export const Header: FC = () => {
         <Cart />
         <Navbar.Collapse id='responsive-navbar-nav gap-2'>
           <Nav className='me-auto fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
-            <Nav.Link href={`${url}menu`}>MENU</Nav.Link>
-            <Nav.Link href={`${url}contacts`}>CONTACTS</Nav.Link>
+            <NavLink
+              to={`${url}menu`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
+              }
+            >
+              MENU
+            </NavLink>
+
+            <NavLink
+              to={`${url}contacts`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
+              }
+            >
+              CONTACTS
+            </NavLink>
           </Nav>
+
           <div className='d-flex gap-3 justify-content-start'>
             <Button
               variant='danger'
