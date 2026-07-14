@@ -15,6 +15,7 @@ export const Header: FC = () => {
   const url = import.meta.env.BASE_URL;
   const selectedDishes = useAppSelector((state) => state.dishes.list);
   const isMounted = useRef(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     if (isMounted.current) {
@@ -32,6 +33,7 @@ export const Header: FC = () => {
       expand='lg'
       className='bg-dark border-1 border-bottom border-danger'
       data-bs-theme='dark'
+      expanded={expanded}
     >
       <Container>
         <Navbar.Brand
@@ -45,6 +47,7 @@ export const Header: FC = () => {
         <Navbar.Toggle
           aria-controls='responsive-navbar-nav'
           className='text-danger'
+          onClick={() => setExpanded(!expanded)}
         />
         <Cart />
         <Navbar.Collapse id='responsive-navbar-nav gap-2'>
@@ -54,6 +57,7 @@ export const Header: FC = () => {
               className={({ isActive }) =>
                 `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
               }
+              onClick={() => setExpanded(false)}
             >
               MENU
             </NavLink>
@@ -63,6 +67,7 @@ export const Header: FC = () => {
               className={({ isActive }) =>
                 `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
               }
+              onClick={() => setExpanded(false)}
             >
               CONTACTS
             </NavLink>

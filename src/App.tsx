@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Copyright } from './components/Copyright';
@@ -19,14 +18,12 @@ function App() {
 
   if (initialLoading) return <Loader />;
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Container className='main_container bg-dark d-flex flex-column justify-content-between'>
-        <Header />
-        <RouteComponent />
-        <Footer />
-        <Copyright />
-      </Container>
-    </BrowserRouter>
+    <Container className='main_container bg-dark d-flex flex-column justify-content-between'>
+      <Header />
+      <RouteComponent />
+      <Footer />
+      <Copyright />
+    </Container>
   );
 }
 
