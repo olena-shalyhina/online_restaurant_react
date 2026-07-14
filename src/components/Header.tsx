@@ -53,7 +53,7 @@ export const Header: FC = () => {
         <Navbar.Collapse id='responsive-navbar-nav gap-2'>
           <Nav className='me-auto fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
             <NavLink
-              to={`${url}menu`}
+              to={`/menu`}
               className={({ isActive }) =>
                 `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
               }
@@ -63,7 +63,7 @@ export const Header: FC = () => {
             </NavLink>
 
             <NavLink
-              to={`${url}contacts`}
+              to={`/contacts`}
               className={({ isActive }) =>
                 `nav-link ${isActive ? 'text-danger fw-bold' : ''}`
               }
