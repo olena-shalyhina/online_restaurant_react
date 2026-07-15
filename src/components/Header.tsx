@@ -50,7 +50,10 @@ export const Header: FC = () => {
           onClick={() => setExpanded(!expanded)}
         />
         <Cart />
-        <Navbar.Collapse id='responsive-navbar-nav gap-2'>
+        <Navbar.Collapse
+          id='responsive-navbar-nav'
+          className='justify-content-center'
+        >
           <Nav className='me-auto fw-bold fs-6 fs-md-5 gap-lg-2 ps-2 h-25wh'>
             <NavLink
               to={`/menu`}

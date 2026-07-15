@@ -37,10 +37,13 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
             Reservation completed successfully!
           </Alert.Heading>
           <p className='text-light fs-6'>
-            <span>{name}, we will be glad to see you</span>
+            <span>
+              <b>{name}</b>
+              <br /> we will be glad to see you
+            </span>
             <br />
             <span>
-              {date} at {time}!
+              <b>{date}</b> at <b>{time}</b>!
             </span>
           </p>
         </>
@@ -49,15 +52,15 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
           <Alert.Heading className='pb-3 text-warning fs-6'>
             Thank you! Check and confirm.
           </Alert.Heading>
-          <p className='py-2 fs-6 pb-3'>
+          <p className='py-2 fs-6 pb-3 text-light'>
             <b>{name}</b>, you have a table reserved for:
-            <br /> {date} at {time}.
+            <br /> <b>{date}</b> at <b>{time}</b>.
             <br />
-            Number of people: {people}
+            Number of people: <b>{people}</b>
             <br />
-            Your phone number: {phone}
+            Your phone number: <b>{phone}</b>
           </p>
-          <hr />
+          <hr className='text-danger' />
           <div className='d-flex justify-content-between'>
             <Button
               onClick={() => {
@@ -66,9 +69,9 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                 setShowModal(true);
               }}
               variant='secondary'
-              className='w-25'
+              className='px-3'
             >
-              Сome back
+              GO BACK
             </Button>
             <Button
               onClick={() => {
@@ -89,9 +92,9 @@ export const ConfirmReservationAlert: FC<ConfirmReservationAlertProps> = ({
                 }, 5000);
               }}
               variant='danger'
-              className='w-25'
+              className='px-3'
             >
-              Confirm
+              CONFIRM
             </Button>
           </div>
         </>

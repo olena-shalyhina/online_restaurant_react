@@ -27,7 +27,8 @@ export const SelectedDishItem: FC<SelectedDishItemProps> = ({ dish }) => {
           <p className='text-start'>{title}</p>
           <div className='d-flex justify-content-between align-items-center gap-2'>
             <div className='text-success fw-semibold  text-center'>
-              &#8364; {price.toFixed(2)}
+              &#8364; {price.toFixed(2)}{' '}
+              {number > 1 && <span className='text-muted'>x {number}</span>}
             </div>
             <div className='text-center d-flex gap-1'>
               <Button
@@ -38,7 +39,7 @@ export const SelectedDishItem: FC<SelectedDishItemProps> = ({ dish }) => {
                 <i className='bi bi-dash-lg'></i>
               </Button>
 
-              <div className='text-center px-1 fw-bold fs-6'>{number}</div>
+              <div className='text-center p-1 fw-bold fs-6'>{number}</div>
 
               <Button
                 variant='secondary'

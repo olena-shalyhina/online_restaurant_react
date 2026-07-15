@@ -14,6 +14,9 @@ export const Cart: FC = () => {
   const [showAllert, setShowAlert] = useState<boolean>(false);
   const handleClick = () => {
     setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
   };
 
   const dispatch = useAppDispatch();
@@ -46,37 +49,39 @@ export const Cart: FC = () => {
           >
             <Modal.Title className='fs-6'>YOUR ORDER</Modal.Title>
           </Modal.Header>
-          <Modal.Body className='bg-dark text-light border border-danger border-bottom-0 border-1 '>
+          <Modal.Body className='bg-dark text-light border border-danger border-1 '>
             <SelectedDishesList />
           </Modal.Body>
-          <Modal.Footer className='d-flex justify-content-between bg-dark border border-danger border-1'>
-            {selectedDishes.length > 0 && (
+          {selectedDishes.length > 0 && (
+            <Modal.Footer className='d-flex justify-content-between bg-dark border border-danger border-1 border-top-0'>
               <Button variant='secondary' onClick={() => dispatch(clearList())}>
                 Clear
               </Button>
-            )}
-            <div className='d-flex gap-2'>
-              {selectedDishes.length > 0 && (
-                <Button variant='danger' onClick={handleClick}>
-                  Go to pay
-                </Button>
-              )}
-            </div>
-            <Alert
-              show={showAllert}
-              variant='danger'
-              className='info_alert d-flex justify-content-between mx-3 gap-2 py-2'
-            >
-              <span>
-                The payment page is under development and is not yet available.
-              </span>
-              <CloseButton
-                onClick={() => {
-                  setShowAlert(false);
-                }}
-              />
-            </Alert>
-          </Modal.Footer>
+
+              <div className='d-flex gap-2'>
+                {selectedDishes.length > 0 && (
+                  <Button variant='danger' onClick={handleClick}>
+                    Go to pay
+                  </Button>
+                )}
+              </div>
+              <Alert
+                show={showAllert}
+                variant='danger'
+                className='info_alert d-flex justify-content-between mx-3 gap-2 py-2'
+              >
+                <span>
+                  The payment page is under development and is not yet
+                  available.
+                </span>
+                <CloseButton
+                  onClick={() => {
+                    setShowAlert(false);
+                  }}
+                />
+              </Alert>
+            </Modal.Footer>
+          )}
         </Modal>
       </div>
     </>

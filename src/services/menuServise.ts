@@ -1,12 +1,12 @@
 import { IDishes } from '../types/types';
-import meat_1 from '../assets/1630221119_1.jpg';
-import meat_2 from '../assets/1630224720_1.jpg';
+import meat_1 from '../assets/1630224720_1.jpg';
+import meat_2 from '../assets/1630221119_1.jpg';
 import meat_3 from '../assets/1630227128_2.jpg';
 import meat_4 from '../assets/1630207211_10.jpg';
 import meat_5 from '../assets/1630229241_21.jpg';
 import meat_6 from '../assets/1630252896_13.jpg';
-import fish_1 from '../assets/1630219545_12.jpg';
-import fish_2 from '../assets/1630213374_11.jpg';
+import fish_1 from '../assets/1630213374_11.jpg';
+import fish_2 from '../assets/1630219545_12.jpg';
 import fish_3 from '../assets/1630216693_11.jpg';
 import fish_4 from '../assets/1630252941_22.jpg';
 import fish_5 from '../assets/1630252819_4.jpg';
