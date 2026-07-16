@@ -5,12 +5,12 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/online_restaurant_react/icon-192.png",
+      "src": "/online_restaurant_react/icon_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/online_restaurant_react/icon-512.png",
+      "src": "/online_restaurant_react/icon_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
