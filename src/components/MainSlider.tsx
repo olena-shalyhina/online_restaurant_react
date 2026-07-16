@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import '../styles/mainPage.scss';
 import meatImage from '../assets/1630224720_1.jpg';
 import fishImage from '../assets/1630219545_12.jpg';
 import sushiImage from '../assets/1630256733_17.jpg';
+import '../styles/mainPage.scss';
 
 export const MainSlider: FC = () => {
   return (

@@ -1,5 +1,4 @@
 import { FC, useState } from 'react';
-
 import Modal from 'react-bootstrap/Modal';
 import { ReservationForm } from './ReservationForm';
 import { ConfirmReservationAlert } from './ConfirmReservationAlert';

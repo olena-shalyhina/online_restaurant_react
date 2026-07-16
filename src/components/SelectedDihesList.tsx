@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { useAppSelector } from '../redux/store/reduxHook';
-
 import { SelectedDishItem } from './SelectedDishItem';
 import { ListGroup } from 'react-bootstrap';
 

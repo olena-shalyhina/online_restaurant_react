@@ -7,7 +7,6 @@ import {
   nameValidation,
   phoneValidation,
 } from '../utils/validateFormValues.ts';
-
 import { IReservationFormFields } from '../types/types';
 
 interface ReservationFormProps {
